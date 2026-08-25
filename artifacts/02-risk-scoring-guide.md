@@ -1,12 +1,14 @@
-# 02A — Risk Scoring Guide
+# 02A - Risk Scoring Guide
 
 ## Risk scoring method
 
-5×5 likelihood and impact model to support risk prioritization. The scoring method is aligned with NIST risk assessment concepts.
+This portfolio uses a simple 5x5 likelihood and impact model to support prioritization.
 
 **Formula:** `Inherent Risk Score = Likelihood × Impact`
 
-Inherent risk represents the risk level before additional remediation or recommended controls are applied.
+Inherent risk represents the modeled risk level before additional remediation is validated.
+
+The numbers are not meant to represent statistical probabilities. They are analyst judgments based on the modeled condition, affected area, threat path, and expected consequence. Each risk-register entry includes a short likelihood and impact rationale so another reviewer can see why the score was chosen.
 
 ## Likelihood scale
 
@@ -32,6 +34,19 @@ Inherent risk represents the risk level before additional remediation or recomme
 
 | Score range | Rating |
 |---|---|
-| 1–8 | Low |
-| 9–14 | Moderate |
-| 15–25 | High |
+| 1-8 | Low |
+| 9-14 | Moderate |
+| 15-25 | High |
+
+## Scoring rule used in this portfolio
+
+For each risk, I ask two separate questions:
+
+1. **Likelihood:** Given the modeled weakness and threat path, how plausible is the event or condition?
+2. **Impact:** If it occurs, how serious is the security, operational, recovery, or compliance consequence?
+
+I record the rationale before relying on the numeric score. The score helps rank the risks, but the written rationale is what makes the judgment reviewable.
+
+## Residual risk
+
+This portfolio does not assign residual-risk scores just because a control or remediation is planned. Residual risk should be reconsidered after there is evidence about implementation, control effectiveness, and remediation results.
