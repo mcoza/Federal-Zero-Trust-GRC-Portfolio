@@ -15,9 +15,21 @@ This is not presented as a complete RMF Select step. A full Select step would in
 | 3 | Select the most relevant control or enhancement | AC-6 Least Privilege |
 | 4 | Explain why the control applies | The risk is caused by access exceeding role requirements |
 | 5 | Define the expected implementation | User permissions match approved role and business need |
-| 6 | Identify evidence | RBAC matrix, group membership export, access review notes |
-| 7 | Assess the evidence when available | Compare observed access to approved access |
+| 6 | Identify evidence | Approved role matrix, group membership export, access review results |
+| 7 | Assess the evidence when available | Compare observed access with approved access |
 | 8 | Trace exceptions to remediation | Assessment finding to POA&M item and retest evidence |
+
+## Keep the mapping as narrow as the evidence
+
+A control is only marked assessed when the modeled evidence actually supports testing that control condition.
+
+The access-review exercise compares approved access with observed access, so the assessment is scoped to:
+
+```text
+AC-6 Least Privilege
+```
+
+AC-2 Account Management is related to account lifecycle and review, but the synthetic access-review dataset does not test the full AC-2 lifecycle. It is therefore not marked assessed by that exercise.
 
 ## Control precision
 
@@ -32,13 +44,16 @@ Privileged MFA
 
 rather than using IA-2 alone when the specific requirement being discussed is multi-factor authentication for privileged accounts.
 
-## Control type definitions
+## Implementation nature labels
 
-| Control type | Description | Examples |
-|---|---|---|
-| Management / Administrative | Policy, governance, planning, review, ownership, and risk decision controls | Policies, access reviews, POA&M tracking, risk decisions |
-| Technical | Controls configured or enforced through technology | MFA, firewall rules, logging configuration, segmentation, access restrictions |
-| Operational | Recurring human or process-driven security activities | Log review, backup testing, access review execution, evidence collection |
+The `Implementation Nature` column is a portfolio description of how the modeled control is mainly carried out. These are not NIST-assigned control classifications.
+
+| Label | Meaning in this portfolio |
+|---|---|
+| Management / Process | Governance, approval, account management, review, or ownership activity |
+| Technical | Primarily configured or enforced through technology |
+| Operational / Process | Recurring review, monitoring, testing, or evidence activity |
+| Mixed labels | The modeled implementation includes more than one of the above |
 
 ## Traceability rule
 
@@ -54,4 +69,4 @@ Risk
 → Remediation
 ```
 
-Remote access is therefore tied to R-003 through AC-17 rather than appearing only as a standalone evidence item.
+Remote access is tied to R-003 through AC-17 rather than appearing only as a standalone evidence item.
