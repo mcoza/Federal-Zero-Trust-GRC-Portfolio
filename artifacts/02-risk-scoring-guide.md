@@ -2,13 +2,13 @@
 
 ## Risk scoring method
 
-This portfolio uses a simple 5x5 likelihood and impact model to support prioritization.
+This portfolio uses a simple 5x5 likelihood and impact model to rank risks.
 
 **Formula:** `Inherent Risk Score = Likelihood × Impact`
 
-Inherent risk represents the modeled risk level before additional remediation is validated.
+Inherent risk is the level of risk before additional remediation is validated.
 
-The numbers are not meant to represent statistical probabilities. They are analyst judgments based on the modeled condition, affected area, threat path, and expected consequence. Each risk-register entry includes a short likelihood and impact rationale so another reviewer can see why the score was chosen.
+The numbers are not statistical probabilities. They are judgments based on the condition, affected area, threat path, and expected impact. Each risk in the register includes a short explanation for the likelihood and impact scores.
 
 ## Likelihood scale
 
@@ -38,15 +38,15 @@ The numbers are not meant to represent statistical probabilities. They are analy
 | 9-14 | Moderate |
 | 15-25 | High |
 
-## Scoring rule used in this portfolio
+## How I score each risk
 
-For each risk, I ask two separate questions:
+I ask two questions:
 
-1. **Likelihood:** Given the modeled weakness and threat path, how plausible is the event or condition?
-2. **Impact:** If it occurs, how serious is the security, operational, recovery, or compliance consequence?
+1. **Likelihood:** Given the weakness and threat path, how likely is this to happen?
+2. **Impact:** If it happens, how serious would the security, operational, recovery, or compliance impact be?
 
-I record the rationale before relying on the numeric score. The score helps rank the risks, but the written rationale is what makes the judgment reviewable.
+I include the written rationale so someone else can see why I chose the score. The number helps rank the risks, but the explanation matters more than the number by itself.
 
 ## Residual risk
 
-This portfolio does not assign residual-risk scores just because a control or remediation is planned. Residual risk should be reconsidered after there is evidence about implementation, control effectiveness, and remediation results.
+I would only score residual risk after I had evidence that the controls were implemented and working. A planned fix by itself is not enough.
