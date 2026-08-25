@@ -72,7 +72,7 @@ The main point is simple: evidence is not proof by itself. I have to compare it 
 | 04A | [POA&M Method](artifacts/04-poam-method.md) | Remediation and closure logic |
 | 05 | [Security Control Policy](artifacts/05-security-control-policy.md) | Control requirements and responsibilities for the scenario |
 | 06 | [Evidence Checklist](artifacts/06-evidence-checklist.csv) | Expected control conditions, evidence artifacts, and validation methods |
-| 07 | [Access Review Evidence](artifacts/07-modeled-access-review.csv) | Synthetic account and group data used in the assessment |
+| 07 | [Access Review Evidence](artifacts/07-synthetic-access-review.csv) | Synthetic account and group data used in the assessment |
 | 07A | [Control Assessment](artifacts/07-control-assessment.md) | AC-6 assessment criteria, exceptions, conclusion, and remediation traceability |
 
 ## Example: R-001 from risk to remediation
