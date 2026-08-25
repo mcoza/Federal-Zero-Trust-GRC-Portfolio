@@ -1,26 +1,47 @@
-# 04A — POA&M Method
+# 04A - POA&M Method
 
 ## Purpose
 
-This tracker documents identified weaknesses, related risks, mapped controls, remediation plans, owners, target dates, status, and closure evidence.
+This tracker documents weaknesses or findings, related risks, mapped controls, remediation plans, action owners, target dates, status, and closure evidence.
+
+The goal is to show the remediation lifecycle without presenting this as an official POA&M for a real federal system.
 
 ## POA&M flow
 
 | Step | Action | Example |
 |---:|---|---|
-| 1 | Identify weakness or control gap | User access reviews are not consistently documented |
-| 2 | Map weakness to related risk and control reference | R-001 mapped to AC-2, AC-5, AC-6 |
-| 3 | Define remediation plan | Conduct RBAC review and remove unnecessary permissions |
-| 4 | Assign owner and target date | IAM Team, 30 Days |
-| 5 | Track closure evidence | Access review export, updated RBAC matrix, approval notes |
+| 1 | Identify a weakness or assessment finding | Two modeled user accounts have access not supported by role requirements |
+| 2 | Map the finding to the related risk and control | R-001 mapped to AC-2 and AC-6 |
+| 3 | Define remediation | Remove unsupported access and review the provisioning / role-change process |
+| 4 | Assign an action owner | IAM Team |
+| 5 | Set a target date | 2026-09-24 |
+| 6 | Track closure evidence | Updated group export, access-review approval, exception correction evidence |
+| 7 | Retest or validate | Confirm the two exceptions are corrected and the expected access condition is met |
+| 8 | Close only after validation | Mark Closed after closure evidence and retest support the conclusion |
 
 ## Status definitions
 
 | Status | Meaning |
 |---|---|
-| Open | Remediation has not started or is pending action. |
-| In Progress | Remediation work has started but closure evidence is not complete. |
-| Pending Validation | Remediation is complete but evidence needs review. |
-| Closed | Remediation has been completed and closure evidence has been retained. |
+| Open | Remediation has not started or is pending action |
+| In Progress | Remediation work has started but closure evidence is not complete |
+| Pending Validation | Remediation is complete but evidence or retesting still needs review |
+| Closed | Remediation and validation are complete and closure evidence is retained |
 
-> **Note:** This tracker is designed as a portfolio demonstration of remediation tracking logic. It does not represent an official POA&M for a real federal system.
+## Dates
+
+The tracker uses actual modeled target dates rather than relative values such as 30 Days or 60 Days. That makes overdue status and milestone tracking easier to understand.
+
+## Closure rule
+
+A remediation action is not considered closed just because the owner says the work is done.
+
+```text
+Remediation completed
+→ closure evidence received
+→ evidence reviewed / retest performed
+→ control condition verified
+→ item closed
+```
+
+> **Note:** This tracker is a portfolio demonstration of remediation-tracking logic. It does not represent an official POA&M for a real federal system.
