@@ -26,7 +26,7 @@ The dataset only has 12 accounts, so I reviewed all 12 instead of taking a sampl
 
 ## Evidence
 
-- [07-modeled-access-review.csv](07-modeled-access-review.csv)
+- [07-synthetic-access-review.csv](07-synthetic-access-review.csv)
 - approved role-to-group assignments in the `Approved Groups` field
 - observed group memberships in the `Observed Groups` field
 
