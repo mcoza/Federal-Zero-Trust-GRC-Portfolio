@@ -1,14 +1,14 @@
-# 07A - Modeled Control Assessment
+# 07A - Control Assessment
 
 ## Purpose
 
-This artifact shows one focused control assessment from evidence to conclusion.
+This example shows how I went from the access data to an assessment result.
 
-The evidence is synthetic and was created for this portfolio. It does not represent a real organization, real users, or a real federal system.
+The evidence is synthetic. It does not represent a real organization, real users, or a real federal system.
 
 ## Assessment objective
 
-Determine whether modeled user access matches approved role requirements.
+Determine whether user access matches approved role requirements.
 
 ## Related risk and control
 
@@ -20,9 +20,9 @@ AC-2 Account Management is related to the broader account lifecycle, but this ex
 
 ## Assessment method
 
-The assessment uses the **examine** method described in NIST SP 800-53A Rev. 5 terminology.
+I used the **examine** method from NIST SP 800-53A Rev. 5.
 
-The modeled population contains 12 accounts, so all 12 records are compared rather than sampling a subset.
+The dataset only has 12 accounts, so I reviewed all 12 instead of taking a sample.
 
 ## Evidence
 
@@ -30,7 +30,7 @@ The modeled population contains 12 accounts, so all 12 records are compared rath
 - approved role-to-group assignments in the `Approved Groups` field
 - observed group memberships in the `Observed Groups` field
 
-The evidence file contains the modeled source values only. Pass/fail results and exceptions are documented in this assessment rather than pre-populated in the evidence.
+The CSV only contains the source data. I kept the pass/fail results in this assessment so the answer is not already built into the evidence.
 
 ## Expected control condition
 
@@ -38,7 +38,7 @@ Observed group membership should not contain access that is unsupported by the a
 
 ## Procedure
 
-1. Read the approved groups for each modeled role.
+1. Read the approved groups for each role.
 2. Compare them with the observed groups for each account.
 3. Mark the record as a pass when observed access does not exceed approved access.
 4. Record an exception when the observed groups contain unsupported access.
@@ -48,11 +48,11 @@ Observed group membership should not contain access that is unsupported by the a
 
 | Result | Count |
 |---|---:|
-| Population reviewed | 12 |
+| Accounts reviewed | 12 |
 | Pass | 10 |
 | Exceptions | 2 |
 
-Only two records contain observed groups that are not present in the approved groups.
+Only two records contain observed groups that are not in the approved groups.
 
 ### Exception A-01
 
@@ -74,17 +74,17 @@ Only two records contain observed groups that are not present in the approved gr
 
 **Other Than Satisfied**
 
-The expected AC-6 condition is not met across the full modeled population because 2 of 12 accounts contain access not supported by the approved role.
+The AC-6 condition is not met across all 12 accounts because two contain access that is not supported by the approved role.
 
-In plain language, the least-privilege condition is not operating consistently in this modeled example.
+Put simply, least privilege is not being applied consistently in this example.
 
 ## Remediation
 
-POAM-001 tracks the following actions:
+POAM-001 tracks these actions:
 
 1. Remove Payroll-Write from U-005.
 2. Remove Server-Admins from U-009.
-3. Review the approved role mappings and access-approval or role-change process related to the two exceptions.
+3. Review the approved role mappings and the access approval or role change process related to the two exceptions.
 4. Retest the corrected accounts after remediation.
 5. Retain updated access evidence before closing the item.
 
@@ -108,8 +108,8 @@ POAM-001
 Correct access + retain evidence + retest before closure
 ```
 
-## Assessment boundary
+## Limits of this example
 
-This is a focused portfolio exercise, not a complete NIST SP 800-53A assessment. It demonstrates the reasoning pattern of defining an expected condition, examining evidence, identifying exceptions, reaching a finding, and tracing the result into remediation.
+This is a focused portfolio exercise, not a complete NIST SP 800-53A assessment. It shows the basic process of setting a condition, reviewing evidence, identifying exceptions, reaching a finding, and tracing that finding into remediation.
 
 Reference: NIST SP 800-53A Rev. 5, Assessing Security and Privacy Controls in Information Systems and Organizations.
