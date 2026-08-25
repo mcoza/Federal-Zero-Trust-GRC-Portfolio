@@ -11,8 +11,8 @@ The goal is to show the remediation lifecycle without presenting this as an offi
 | Step | Action | Example |
 |---:|---|---|
 | 1 | Identify a weakness or assessment finding | Two modeled user accounts have access not supported by role requirements |
-| 2 | Map the finding to the related risk and control | R-001 mapped to AC-2 and AC-6 |
-| 3 | Define remediation | Remove unsupported access and review the provisioning / role-change process |
+| 2 | Map the finding to the related risk and control | R-001 mapped to AC-6 |
+| 3 | Define remediation | Remove unsupported access and review the access-approval or role-change process |
 | 4 | Assign an action owner | IAM Team |
 | 5 | Set a target date | 2026-09-24 |
 | 6 | Track closure evidence | Updated group export, access-review approval, exception correction evidence |
@@ -30,7 +30,7 @@ The goal is to show the remediation lifecycle without presenting this as an offi
 
 ## Dates
 
-The tracker uses actual modeled target dates rather than relative values such as 30 Days or 60 Days. That makes overdue status and milestone tracking easier to understand.
+The tracker uses actual modeled target dates rather than relative values such as 30 Days or 60 Days. These are portfolio planning dates, not federal mandated remediation deadlines.
 
 ## Closure rule
 
