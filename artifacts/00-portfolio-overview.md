@@ -5,18 +5,18 @@
 | Field | Value |
 |---|---|
 | Document | Federal Zero Trust GRC Portfolio Overview |
-| Project Type | Graduate Capstone-Derived GRC Portfolio Project |
+| Project Type | Graduate Capstone GRC Portfolio Project |
 | Author | Mark C. |
-| Version | 1.2 |
-| Disclaimer | For portfolio demonstration purposes only. This project is derived from a graduate cybersecurity capstone and does not contain sensitive, proprietary, or real federal agency data. |
+| Version | 1.3 |
+| Disclaimer | For portfolio demonstration purposes only. This project is based on a graduate cybersecurity capstone and does not contain sensitive, proprietary, or real federal agency data. |
 
 ## Project background
 
-This portfolio focuses on unauthorized-access risk in a modeled civilian federal environment.
+This portfolio focuses on unauthorized access risk in a fictional civilian federal environment.
 
-The modeled environment includes internal users, privileged administrators, remote access users, application servers, file shares, logging systems, backup systems, network infrastructure, and segmented network zones.
+The environment includes internal users, privileged administrators, remote access users, application servers, file shares, logging systems, backup systems, network infrastructure, and segmented network zones.
 
-The work was reorganized into GRC artifacts so the reasoning can be followed from an identified condition through risk analysis, control selection, evidence review, a finding, and remediation tracking.
+I reorganized the capstone into GRC artifacts so you can follow how I got from a security issue to the risk, controls, evidence, finding, and remediation.
 
 ## Scope
 
@@ -24,11 +24,11 @@ The portfolio covers five risk themes:
 
 1. excessive user access
 2. weak privileged access governance
-3. insufficient network segmentation and remote-access restrictions
+3. insufficient network segmentation and remote access restrictions
 4. incomplete SIEM and logging coverage
 5. unvalidated backup and restore processes
 
-The purpose is not to model every control or every RMF activity. The scope is intentionally limited so each artifact has a clear reason to exist.
+I kept the scope small on purpose. The goal is to show the full reasoning process, not recreate an entire federal RMF package.
 
 ## Framework use
 
@@ -43,13 +43,11 @@ The purpose is not to model every control or every RMF activity. The scope is in
 - NIST SP 800-207 Zero Trust Architecture
 - CISA Zero Trust Maturity Model
 
-NIST SP 800-53 is the main source for control selection. The other references help frame assessment, risk-management, and selected Zero Trust concepts.
-
-This is not presented as a complete RMF Select, Assess, Authorize, or Monitor package.
+NIST SP 800-53 is the main source I use for control selection. The other references help with assessment, risk management, and the Zero Trust concepts used in the project.
 
 ## Method used
 
-The working method is:
+My working process is:
 
 ```text
 Identify condition
@@ -64,7 +62,7 @@ Identify condition
 → validate before closure
 ```
 
-The modeled access-review exercise demonstrates that full chain for R-001 and AC-6.
+The access review exercise shows that full chain for R-001 and AC-6.
 
 ## Selected Zero Trust relationship
 
@@ -75,11 +73,11 @@ The modeled access-review exercise demonstrates that full chain for R-001 and AC
 | SIEM coverage and event review | Visibility and Analytics |
 | Risk, policy, evidence, and remediation tracking | Governance |
 
-This is a limited crosswalk only. It does not assign maturity levels or claim full coverage of the CISA model.
+This is only a limited crosswalk. I am not assigning maturity levels or claiming full coverage of the CISA model.
 
-## Portfolio boundaries
+## What this project does not cover
 
-This project does not claim to include:
+This project does not include:
 
 - a complete system categorization
 - a full control baseline selection and tailoring package
@@ -89,10 +87,10 @@ This project does not claim to include:
 - a continuous monitoring program
 - a full Zero Trust maturity assessment
 
-Residual risk is not calculated across the environment because control effectiveness and remediation have not been validated across the full scope.
+I also do not calculate residual risk across the environment because the controls and remediation have not been validated across the full scope.
 
-## What the modeled assessment does prove
+## What the access review actually tests
 
-The synthetic access-review exercise is limited to one condition: whether observed access matches approved role access.
+The synthetic access review checks one condition: whether observed access matches approved role access.
 
-That is used as a focused AC-6 Least Privilege assessment example. AC-2 Account Management is related to the broader account lifecycle, but the modeled access-review exercise does not claim to assess the full AC-2 control.
+I use that as a focused AC-6 Least Privilege assessment example. AC-2 Account Management is related to the broader account lifecycle, but this exercise does not test the full AC-2 control.
