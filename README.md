@@ -1,33 +1,55 @@
 # Federal Zero Trust GRC Portfolio
 
-A graduate capstone-derived governance, risk, and compliance portfolio modeling unauthorized-access risk in a fictional civilian federal environment.
+A graduate capstone-derived GRC portfolio built around a fictional civilian federal environment.
 
-The project translates academic cybersecurity work into practical GRC deliverables: risk identification, control mapping, remediation tracking, policy development, evidence planning, and one modeled control assessment.
+The project shows a practical chain from a security condition to a risk, selected controls, evidence, an assessment result, and remediation tracking.
 
-> **Portfolio demonstration only.** This repository contains no sensitive, proprietary, or real federal agency data. It represents academic/portfolio work, not professional federal GRC experience.
+> **Portfolio demonstration only.** This repository contains no sensitive, proprietary, or real federal agency data. It represents academic and portfolio work, not professional federal GRC experience.
 
-## Scenario
+## What this portfolio shows
 
-The modeled environment includes internal users, privileged administrators, remote access users, application servers, file shares, logging systems, backup systems, network infrastructure, and segmented network zones.
+- risk identification and prioritization
+- NIST SP 800-53 Rev. 5 control mapping
+- risk scoring with written rationale
+- evidence planning
+- one modeled control assessment using synthetic access data
+- remediation tracking through a POA&M-style artifact
+- policy requirements and a limited Zero Trust crosswalk
 
-The security objective is to reduce unauthorized access and data exposure through controls across identity, access governance, privileged access, network segmentation, remote access, logging, and backup validation.
+NIST SP 800-53 is the main control framework. NIST SP 800-37, NIST SP 800-53A, NIST SP 800-207, and the CISA Zero Trust Maturity Model are supporting references where they fit the work shown here.
 
-## Frameworks used
+This is not a complete federal RMF package or a full Zero Trust maturity assessment.
 
-**Primary control framework**
+## Reasoning flow
 
-- NIST SP 800-53 Rev. 5
+```mermaid
+flowchart TD
+    A[Understand the modeled environment] --> B[Identify a security condition or weakness]
+    B --> C[Identify the affected asset or business area]
+    C --> D[Determine what could happen]
+    D --> E[Write the risk statement]
+    E --> F[Score likelihood and impact with rationale]
+    F --> G[Prioritize the risk]
+    G --> H[Select a relevant control]
+    H --> I[Define the expected control condition]
+    I --> J[Identify evidence]
+    J --> K[Examine or test the evidence]
+    K --> L{Does the evidence meet the condition?}
+    L -->|Yes| M[Document the conclusion]
+    L -->|No| N[Document the finding]
+    N --> O[Define remediation]
+    O --> P[Assign an action owner and target date]
+    P --> Q[Collect closure evidence]
+    Q --> R[Retest or validate]
+    R --> S{Corrected?}
+    S -->|Yes| M
+    S -->|No| O
+    M --> T[Update the risk picture and report the result]
+```
 
-**Supporting references and concepts**
+The main point is that evidence is not proof by itself. It has to be compared with an expected condition before it supports a control conclusion or finding.
 
-- NIST SP 800-37 Rev. 2 Risk Management Framework concepts
-- NIST SP 800-53A Rev. 5 assessment methods
-- NIST SP 800-207 Zero Trust Architecture
-- CISA Zero Trust Maturity Model
-
-NIST SP 800-53 is the main control framework used in the artifacts. The Zero Trust references are used to explain selected identity, network, visibility, and governance themes. This is not a full Zero Trust maturity assessment or a complete federal RMF package.
-
-## Portfolio snapshot
+## Current portfolio snapshot
 
 - **Risks identified:** 5
 - **High risks:** 4
@@ -35,97 +57,46 @@ NIST SP 800-53 is the main control framework used in the artifacts. The Zero Tru
 - **Evidence items:** 8
 - **Modeled control assessments:** 1
 - **Modeled access-review exceptions:** 2
-- **Primary control framework:** NIST SP 800-53 Rev. 5
-
-## How I reasoned through the work
-
-The artifacts are meant to follow one decision path rather than exist as separate templates.
-
-```mermaid
-flowchart TD
-    A[Understand the modeled environment] --> B[Identify a security condition or weakness]
-    B --> C[Identify the affected asset or business area]
-    C --> D[Determine what could happen if the weakness is exploited]
-    D --> E[Write the risk statement]
-    E --> F[Estimate likelihood and impact and document the rationale]
-    F --> G[Prioritize the risk]
-    G --> H[Select a control that should reduce the risk]
-    H --> I[Define what proper implementation should look like]
-    I --> J[Identify evidence that would support the control]
-    J --> K[Examine or test the evidence]
-    K --> L{Does the evidence meet the expected condition?}
-    L -->|Yes| M[Document the control conclusion]
-    L -->|No| N[Document the finding or exception]
-    N --> O[Define remediation]
-    O --> P[Assign an action owner and target date]
-    P --> Q[Collect closure evidence]
-    Q --> R[Retest or validate the remediation]
-    R --> S{Issue corrected?}
-    S -->|Yes| M
-    S -->|No| O
-    M --> T[Update the risk picture and report what matters]
-```
-
-The key bridge is the assessment step. Evidence is not useful just because it exists. It has to be compared with an expected control condition before it supports a conclusion or finding.
 
 ## Artifacts
 
-| # | Artifact | What it demonstrates | Related GRC / RMF activity |
-|---|---|---|---|
-| 00 | [Portfolio Overview](artifacts/00-portfolio-overview.md) | Project scope, framework use, Zero Trust relationship, and artifact flow | Context and planning |
-| 01 | [Executive Risk Summary](artifacts/01-executive-risk-summary.md) | Leadership-facing priorities, business impact, recommended actions, and current risk position | Risk communication |
-| 02 | [Risk Register](artifacts/02-risk-register.csv) | Risk statements, assets, threats, vulnerabilities, scoring rationale, treatment, ownership, and evidence needs | Risk assessment and prioritization |
-| 02A | [Risk Scoring Guide](artifacts/02-risk-scoring-guide.md) | 5×5 likelihood/impact method and rating thresholds | Risk analysis |
-| 03 | [Control Mapping Matrix](artifacts/03-control-mapping-matrix.csv) | Risk-to-control mapping, implementation expectations, evidence needs, owners, status, and assessment traceability | Control selection and planning |
-| 03A | [Control Mapping Method](artifacts/03-control-mapping-method.md) | Method used to select controls and define implementation/evidence expectations | Control planning |
-| 04 | [POA&M-Style Remediation Tracker](artifacts/04-poam-remediation-tracker.csv) | Findings, milestones, action owners, target dates, status, and closure evidence | Remediation tracking and monitoring |
-| 04A | [POA&M Method](artifacts/04-poam-method.md) | Remediation flow and status definitions | Remediation management |
-| 05 | [Security Control Policy](artifacts/05-security-control-policy.md) | Governance requirements for access, segmentation, remote access, logging, backup validation, and exceptions | Policy and control requirements |
-| 06 | [Evidence Checklist](artifacts/06-evidence-checklist.csv) | Evidence requirements, validation methods, owners, and review frequency | Assessment planning |
-| 07 | [Modeled Access Review Evidence](artifacts/07-modeled-access-review.csv) | A small synthetic population used to test role-based access | Assessment evidence |
-| 07A | [Modeled Control Assessment](artifacts/07-control-assessment.md) | Test criteria, procedure, exceptions, conclusion, and remediation traceability | Control assessment |
+| # | Artifact | What it shows |
+|---|---|---|
+| 00 | [Portfolio Overview](artifacts/00-portfolio-overview.md) | Scenario, scope, framework boundaries, and methodology |
+| 01 | [Executive Risk Summary](artifacts/01-executive-risk-summary.md) | Priority risks, business impact, and recommended actions |
+| 02 | [Risk Register](artifacts/02-risk-register.csv) | Risk statements, scores, rationale, treatment, owners, and evidence needs |
+| 02A | [Risk Scoring Guide](artifacts/02-risk-scoring-guide.md) | 5x5 scoring method and rating thresholds |
+| 03 | [Control Mapping Matrix](artifacts/03-control-mapping-matrix.csv) | Risk-to-control mapping, expected implementation, evidence, and status |
+| 03A | [Control Mapping Method](artifacts/03-control-mapping-method.md) | How controls were selected and traced to evidence and remediation |
+| 04 | [POA&M-Style Remediation Tracker](artifacts/04-poam-remediation-tracker.csv) | Findings, milestones, owners, dates, and closure evidence |
+| 04A | [POA&M Method](artifacts/04-poam-method.md) | Remediation and closure logic |
+| 05 | [Security Control Policy](artifacts/05-security-control-policy.md) | Modeled control requirements and responsibilities |
+| 06 | [Evidence Checklist](artifacts/06-evidence-checklist.csv) | Expected control conditions, evidence artifacts, and validation methods |
+| 07 | [Modeled Access Review Evidence](artifacts/07-modeled-access-review.csv) | Synthetic account and group data used in the assessment |
+| 07A | [Modeled Control Assessment](artifacts/07-control-assessment.md) | AC-6 assessment criteria, exceptions, conclusion, and remediation traceability |
 
-## Risk themes
-
-1. Excessive user access beyond role requirements
-2. Weak privileged access separation and monitoring
-3. Insufficient internal network segmentation
-4. Incomplete SIEM/logging coverage
-5. Unvalidated backup and restore processes
-
-## Selected Zero Trust relationship
-
-| Existing portfolio work | Zero Trust relationship |
-|---|---|
-| User and privileged access reviews | Identity |
-| Network zones, inter-zone controls, and remote access | Networks |
-| SIEM/log source coverage and alert review | Visibility and Analytics |
-| Risk register, policy, evidence planning, and POA&M tracking | Governance |
-
-This table only shows where the existing work lines up with selected Zero Trust concepts. Devices, applications/workloads, data, automation/orchestration, and maturity levels are not fully assessed here.
-
-## GRC workflow represented
+## Strongest traceability example
 
 ```text
-Identify condition
-    ↓
-Write and score risk
-    ↓
-Map relevant controls
-    ↓
-Define expected implementation
-    ↓
-Identify evidence
-    ↓
-Assess evidence against criteria
-    ↓
-Document conclusion or finding
-    ↓
-Track remediation and closure evidence
+R-001 Excessive user access
+        ↓
+AC-6 Least Privilege
+        ↓
+Expected condition: access matches approved role
+        ↓
+Synthetic access evidence
+        ↓
+2 of 12 records contain unsupported access
+        ↓
+Assessment finding: Other Than Satisfied
+        ↓
+POAM-001
+        ↓
+Correct access, retain evidence, and retest before closure
 ```
 
-Residual risk is not assigned just because a control is planned. It should be reconsidered after there is evidence about control effectiveness and remediation status.
+## Scope boundary
 
-## Repository purpose
+The portfolio does not claim to include a complete system categorization, control baseline tailoring package, SSP, SAP, SAR, authorization decision, or continuous monitoring program.
 
-The repository is intentionally self-contained so the portfolio can be reviewed directly in GitHub without requiring access to the original Google Drive workspace. The source documents and spreadsheets remain the working originals; the files here are portfolio-readable representations of those artifacts.
+Residual risk is also not assigned just because remediation is planned. It should be reconsidered after there is evidence about implementation, control effectiveness, and remediation results.
