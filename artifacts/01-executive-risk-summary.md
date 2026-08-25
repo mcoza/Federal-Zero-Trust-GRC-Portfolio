@@ -1,4 +1,4 @@
-# 01 — Executive Risk Summary
+# 01 - Executive Risk Summary
 
 ## Document control
 
@@ -7,37 +7,40 @@
 | Document | Executive Risk Summary |
 | Project | Federal Zero Trust GRC Portfolio |
 | Author | Mark C. |
-| Version | 1.0 |
+| Version | 1.1 |
 
 ## Summary
 
-The modeled federal enterprise environment has elevated unauthorized access risk due to excessive user permissions, weak privileged access separation, insufficient network segmentation, incomplete SIEM/logging coverage, and unvalidated backup and restore processes.
+The modeled environment has elevated unauthorized-access risk across user access, privileged access, network segmentation, logging coverage, and backup validation.
 
-These gaps could allow a compromised user account, endpoint, privileged account, or remote access session to enable lateral movement, expose sensitive systems, disrupt operations, or create audit findings.
+The highest inherent risk scores are tied to excessive user access, weak privileged access governance, and insufficient segmentation. These conditions can increase the impact of a compromised account or endpoint by allowing unnecessary access, administrative misuse, or lateral movement.
 
-Remediation is tracked through POA&M-style action items with assigned owners, target dates, and supporting evidence requirements.
+The scores in this portfolio are inherent-risk estimates based on the modeled conditions. Residual risk is not calculated yet because control effectiveness and remediation have not been validated across the full environment.
 
-## Security objective
+## Priority view
 
-Reduce unauthorized access and data exposure by applying Zero Trust-aligned controls across identity, access governance, privileged access, network segmentation, remote access, logging, and backup validation.
+| Risk | Inherent score | Rating | Why it matters | Immediate action | Action owner |
+|---|---:|---|---|---|---|
+| R-001 Excessive user access | 20 | High | Users may retain access beyond their role, increasing unauthorized access risk | Review access against approved roles and remove unsupported permissions | IAM Team |
+| R-002 Weak privileged access separation | 20 | High | Privileged compromise could affect multiple systems and security settings | Separate admin accounts, enforce privileged MFA, and review privileged groups | Security / IAM Team |
+| R-003 Insufficient network segmentation | 20 | High | A compromised endpoint could reach systems that should be isolated | Define zones and restrict inter-zone traffic to approved paths | Network Team |
+| R-004 Incomplete SIEM/logging coverage | 15 | High | Missing events can delay detection and investigation | Onboard critical authentication, firewall, endpoint, and administrative logs | SOC Team |
+| R-005 Unvalidated backup and restore | 12 | Moderate | Recovery may fail when needed if restore testing is not proven | Perform and document scheduled restore testing | SysAdmin Team |
 
-## Key findings
+## Assessment result already modeled
 
-1. User access may not consistently follow least privilege or role-based access control principles.
-2. Privileged accounts and administrative access paths may require stronger separation, monitoring, and review.
-3. Internal segmentation may not fully restrict lateral movement between user, server, administrative, remote access, and DMZ zones.
-4. SIEM coverage may not include all critical authentication, network, endpoint, and administrative events.
-5. Backup and restore processes may not be regularly validated through documented testing.
+A small modeled access review was performed for R-001 using 12 synthetic user records. Ten records matched the approved role-based access expectation and two contained unsupported group memberships.
+
+That result supports a finding that the access-review / least-privilege control objective is not operating consistently across the modeled population. The exceptions are traced to POAM-001 for remediation and later retesting.
 
 ## Recommended actions
 
-1. Review user and privileged access against documented role requirements.
-2. Define network zones for users, administrators, servers, remote access, DMZ, logging, and backup systems.
-3. Restrict inter-zone traffic using deny-by-default rules and documented business justifications.
-4. Onboard critical authentication, firewall, endpoint, and administrative logs into the SIEM.
-5. Track remediation using a POA&M-style tracker with owners, target dates, status, and evidence.
-6. Validate backup and restore processes through scheduled testing and retained evidence.
+1. Correct the two modeled access exceptions and retest the affected accounts.
+2. Review privileged accounts and privileged MFA requirements using AC-6 and IA-2(1) as part of the control plan.
+3. Define approved network zones and remote-access paths before validating firewall and ACL evidence.
+4. Confirm required log sources are actively ingesting into the SIEM and that review evidence exists.
+5. Perform a documented restore test and retain the result as evidence.
 
-## Expected outcome
+## What leadership would need next
 
-Reduced unauthorized access risk, stronger access governance, improved segmentation, better monitoring visibility, validated recovery processes, and clearer remediation tracking.
+Before making a risk-acceptance or residual-risk decision, the modeled organization would need stronger evidence that the planned controls are implemented and operating as intended. The next useful outputs are completed remediation evidence, targeted control tests, and retest results for the highest-priority risks.
