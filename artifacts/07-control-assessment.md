@@ -2,45 +2,47 @@
 
 ## Purpose
 
-This artifact shows one small control assessment from evidence to conclusion.
+This artifact shows one focused control assessment from evidence to conclusion.
 
 The evidence is synthetic and was created for this portfolio. It does not represent a real organization, real users, or a real federal system.
 
 ## Assessment objective
 
-Determine whether modeled user access is consistent with approved role requirements.
+Determine whether modeled user access matches approved role requirements.
 
-## Related risk and controls
+## Related risk and control
 
 - **Risk:** R-001 Excessive user access
-- **Controls:** AC-2 Account Management and AC-6 Least Privilege
+- **Assessed control:** AC-6 Least Privilege
 - **Related remediation item:** POAM-001
+
+AC-2 Account Management is related to the broader account lifecycle, but this exercise does not test the full AC-2 control.
 
 ## Assessment method
 
 The assessment uses the **examine** method described in NIST SP 800-53A Rev. 5 terminology.
 
-Because the modeled population is small, I reviewed all 12 records instead of sampling a subset.
+The modeled population contains 12 accounts, so all 12 records are compared rather than sampling a subset.
 
 ## Evidence
 
 - [07-modeled-access-review.csv](07-modeled-access-review.csv)
-- modeled approved role-to-group assignments
-- modeled observed group memberships
+- approved role-to-group assignments in the `Approved Groups` field
+- observed group memberships in the `Observed Groups` field
 
-## Test criteria
+The evidence file contains the modeled source values only. Pass/fail results and exceptions are documented in this assessment rather than pre-populated in the evidence.
 
-A record passes when the observed group memberships match the groups approved for the user's modeled role.
+## Expected control condition
 
-A record is an exception when the observed access contains a group that is not supported by the approved role.
+Observed group membership should not contain access that is unsupported by the approved role.
 
 ## Procedure
 
-1. Identify the approved groups for each modeled role.
-2. Compare the approved groups with the observed group memberships for each account.
-3. Mark the account as Pass when observed access matches the approved role.
-4. Mark the account as Exception when unsupported access is present.
-5. Document the unsupported group and trace the finding to remediation.
+1. Read the approved groups for each modeled role.
+2. Compare them with the observed groups for each account.
+3. Mark the record as a pass when observed access does not exceed approved access.
+4. Record an exception when the observed groups contain unsupported access.
+5. Trace confirmed exceptions to remediation.
 
 ## Results
 
@@ -50,27 +52,31 @@ A record is an exception when the observed access contains a group that is not s
 | Pass | 10 |
 | Exceptions | 2 |
 
+Only two records contain observed groups that are not present in the approved groups.
+
 ### Exception A-01
 
 - **Account:** U-005
 - **Role:** Finance Analyst
 - **Approved access:** Finance-Read
-- **Observed additional access:** Payroll-Write
-- **Finding:** Payroll-Write is not supported by the approved role.
+- **Observed access:** Finance-Read; Payroll-Write
+- **Unsupported access:** Payroll-Write
 
 ### Exception A-02
 
 - **Account:** U-009
 - **Role:** Support Analyst
 - **Approved access:** Helpdesk-Users
-- **Observed additional access:** Server-Admins
-- **Finding:** Server-Admins is not supported by the approved role and introduces unnecessary administrative access.
+- **Observed access:** Helpdesk-Users; Server-Admins
+- **Unsupported access:** Server-Admins
 
-## Conclusion
+## Assessment finding
 
-The modeled control objective is **partially met but not operating consistently** across the reviewed population.
+**Other Than Satisfied**
 
-Ten accounts matched the approved access expectation, but two exceptions show that unsupported access can remain assigned. That supports a finding against the modeled access-review and least-privilege process rather than a conclusion that the control is fully effective.
+The expected AC-6 condition is not met across the full modeled population because 2 of 12 accounts contain access not supported by the approved role.
+
+In plain language, the least-privilege condition is not operating consistently in this modeled example.
 
 ## Remediation
 
@@ -78,32 +84,32 @@ POAM-001 tracks the following actions:
 
 1. Remove Payroll-Write from U-005.
 2. Remove Server-Admins from U-009.
-3. Review the role mapping and provisioning / role-change process that allowed the unsupported access.
-4. Retest the affected accounts after remediation.
-5. Retain updated access-review evidence before closing the item.
+3. Review the approved role mappings and access-approval or role-change process related to the two exceptions.
+4. Retest the corrected accounts after remediation.
+5. Retain updated access evidence before closing the item.
 
 ## Traceability
 
 ```text
 R-001 Excessive user access
         ↓
-AC-2 / AC-6
+AC-6 Least Privilege
         ↓
 Expected condition: access matches approved role
         ↓
-Modeled evidence reviewed
+Compare approved vs observed access
         ↓
 2 exceptions found
         ↓
-Control conclusion: not operating consistently
+Assessment finding: Other Than Satisfied
         ↓
 POAM-001
         ↓
-Remediation + retest before closure
+Correct access + retain evidence + retest before closure
 ```
 
 ## Assessment boundary
 
-This is a focused portfolio example, not a complete NIST SP 800-53A assessment. It demonstrates the reasoning pattern of defining criteria, examining evidence, documenting exceptions, reaching a conclusion, and tracing the result into remediation.
+This is a focused portfolio exercise, not a complete NIST SP 800-53A assessment. It demonstrates the reasoning pattern of defining an expected condition, examining evidence, identifying exceptions, reaching a finding, and tracing the result into remediation.
 
 Reference: NIST SP 800-53A Rev. 5, Assessing Security and Privacy Controls in Information Systems and Organizations.
