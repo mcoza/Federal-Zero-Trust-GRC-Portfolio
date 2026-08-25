@@ -7,7 +7,7 @@
 | Document | Executive Risk Summary |
 | Project | Federal Zero Trust GRC Portfolio |
 | Author | Mark C. |
-| Version | 1.1 |
+| Version | 1.2 |
 
 ## Summary
 
@@ -27,16 +27,18 @@ The scores in this portfolio are inherent-risk estimates based on the modeled co
 | R-004 Incomplete SIEM/logging coverage | 15 | High | Missing events can delay detection and investigation | Onboard critical authentication, firewall, endpoint, and administrative logs | SOC Team |
 | R-005 Unvalidated backup and restore | 12 | Moderate | Recovery may fail when needed if restore testing is not proven | Perform and document scheduled restore testing | SysAdmin Team |
 
-## Assessment result already modeled
+## Modeled assessment result
 
-A small modeled access review was performed for R-001 using 12 synthetic user records. Ten records matched the approved role-based access expectation and two contained unsupported group memberships.
+A focused access review was modeled for R-001 using 12 synthetic user records. Ten records matched the approved role-based access condition and two contained unsupported group memberships.
 
-That result supports a finding that the access-review / least-privilege control objective is not operating consistently across the modeled population. The exceptions are traced to POAM-001 for remediation and later retesting.
+The AC-6 Least Privilege assessment result is **Other Than Satisfied** because the expected condition was not met across the full reviewed population.
+
+In plain language, the access condition was not operating consistently. The two exceptions are traced to POAM-001 for correction and retesting.
 
 ## Recommended actions
 
 1. Correct the two modeled access exceptions and retest the affected accounts.
-2. Review privileged accounts and privileged MFA requirements using AC-6 and IA-2(1) as part of the control plan.
+2. Review privileged-account lifecycle, separation, privileged MFA, and activity monitoring for R-002.
 3. Define approved network zones and remote-access paths before validating firewall and ACL evidence.
 4. Confirm required log sources are actively ingesting into the SIEM and that review evidence exists.
 5. Perform a documented restore test and retain the result as evidence.
