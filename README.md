@@ -1,8 +1,8 @@
 # Federal Zero Trust GRC Portfolio
 
-A graduate capstone-derived GRC portfolio built around a fictional civilian federal environment.
+A GRC portfolio based on my graduate cybersecurity capstone and built around a fictional civilian federal environment.
 
-The project shows a practical chain from a security condition to a risk, selected controls, evidence, an assessment result, and remediation tracking.
+The project shows how I went from identifying security issues to documenting risk, choosing controls, reviewing evidence, finding exceptions, and tracking remediation.
 
 > **Portfolio demonstration only.** This repository contains no sensitive, proprietary, or real federal agency data. It represents academic and portfolio work, not professional federal GRC experience.
 
@@ -12,7 +12,7 @@ The project shows a practical chain from a security condition to a risk, selecte
 - NIST SP 800-53 Rev. 5 control mapping
 - risk scoring with written rationale
 - evidence planning
-- one modeled control assessment using synthetic access data
+- one control assessment using synthetic access data
 - remediation tracking through a POA&M-style artifact
 - policy requirements and a limited Zero Trust crosswalk
 
@@ -24,7 +24,7 @@ This is not a complete federal RMF package or a full Zero Trust maturity assessm
 
 ```mermaid
 flowchart TD
-    A[Understand the modeled environment] --> B[Identify a security condition or weakness]
+    A[Understand the environment] --> B[Identify a security condition or weakness]
     B --> C[Identify the affected asset or business area]
     C --> D[Determine what could happen]
     D --> E[Write the risk statement]
@@ -47,7 +47,7 @@ flowchart TD
     M --> T[Update the risk picture and report the result]
 ```
 
-The main point is that evidence is not proof by itself. It has to be compared with an expected condition before it supports a control conclusion or finding.
+The main point is simple: evidence is not proof by itself. I have to compare it with an expected condition before I can support a control conclusion or finding.
 
 ## Current portfolio snapshot
 
@@ -55,27 +55,27 @@ The main point is that evidence is not proof by itself. It has to be compared wi
 - **High risks:** 4
 - **POA&M items:** 5
 - **Evidence items:** 8
-- **Modeled control assessments:** 1
-- **Modeled access-review exceptions:** 2
+- **Control assessments:** 1
+- **Access review exceptions:** 2
 
 ## Artifacts
 
 | # | Artifact | What it shows |
 |---|---|---|
-| 00 | [Portfolio Overview](artifacts/00-portfolio-overview.md) | Scenario, scope, framework boundaries, and methodology |
+| 00 | [Portfolio Overview](artifacts/00-portfolio-overview.md) | Scenario, scope, framework use, and methodology |
 | 01 | [Executive Risk Summary](artifacts/01-executive-risk-summary.md) | Priority risks, business impact, and recommended actions |
 | 02 | [Risk Register](artifacts/02-risk-register.csv) | Risk statements, scores, rationale, treatment, owners, and evidence needs |
 | 02A | [Risk Scoring Guide](artifacts/02-risk-scoring-guide.md) | 5x5 scoring method and rating thresholds |
 | 03 | [Control Mapping Matrix](artifacts/03-control-mapping-matrix.csv) | Risk-to-control mapping, expected implementation, evidence, and status |
-| 03A | [Control Mapping Method](artifacts/03-control-mapping-method.md) | How controls were selected and traced to evidence and remediation |
+| 03A | [Control Mapping Method](artifacts/03-control-mapping-method.md) | How I selected controls and traced them to evidence and remediation |
 | 04 | [POA&M-Style Remediation Tracker](artifacts/04-poam-remediation-tracker.csv) | Findings, milestones, owners, dates, and closure evidence |
 | 04A | [POA&M Method](artifacts/04-poam-method.md) | Remediation and closure logic |
-| 05 | [Security Control Policy](artifacts/05-security-control-policy.md) | Modeled control requirements and responsibilities |
+| 05 | [Security Control Policy](artifacts/05-security-control-policy.md) | Control requirements and responsibilities for the scenario |
 | 06 | [Evidence Checklist](artifacts/06-evidence-checklist.csv) | Expected control conditions, evidence artifacts, and validation methods |
-| 07 | [Modeled Access Review Evidence](artifacts/07-modeled-access-review.csv) | Synthetic account and group data used in the assessment |
-| 07A | [Modeled Control Assessment](artifacts/07-control-assessment.md) | AC-6 assessment criteria, exceptions, conclusion, and remediation traceability |
+| 07 | [Access Review Evidence](artifacts/07-modeled-access-review.csv) | Synthetic account and group data used in the assessment |
+| 07A | [Control Assessment](artifacts/07-control-assessment.md) | AC-6 assessment criteria, exceptions, conclusion, and remediation traceability |
 
-## Strongest traceability example
+## Example: R-001 from risk to remediation
 
 ```text
 R-001 Excessive user access
@@ -95,8 +95,8 @@ POAM-001
 Correct access, retain evidence, and retest before closure
 ```
 
-## Scope boundary
+## What this project does not cover
 
-The portfolio does not claim to include a complete system categorization, control baseline tailoring package, SSP, SAP, SAR, authorization decision, or continuous monitoring program.
+The portfolio does not include a complete system categorization, control baseline tailoring package, SSP, SAP, SAR, authorization decision, or continuous monitoring program.
 
-Residual risk is also not assigned just because remediation is planned. It should be reconsidered after there is evidence about implementation, control effectiveness, and remediation results.
+I also do not assign residual risk just because remediation is planned. I would revisit residual risk after there is evidence that the controls are implemented and working.
