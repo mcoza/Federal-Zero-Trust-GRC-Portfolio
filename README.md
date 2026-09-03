@@ -1,8 +1,12 @@
 # Federal Zero Trust GRC Portfolio
 
-A GRC portfolio based on my graduate cybersecurity capstone and built around a fictional civilian federal environment.
+**IT Risk Assessment, Control Testing, Evidence Review, and Remediation**
 
-The project shows how I went from identifying security issues to documenting risk, choosing controls, reviewing evidence, finding exceptions, and tracking remediation.
+This portfolio demonstrates an IT risk and control assessment workflow using a fictional civilian federal environment.
+
+The purpose is not to recreate the full NIST Risk Management Framework or produce a complete federal authorization package. Instead, the project focuses on the GRC work most relevant to risk and control-assessment roles: identifying and prioritizing risk, mapping risks to security controls, defining evidence expectations, assessing control effectiveness, documenting exceptions, and tracking remediation through validation.
+
+NIST SP 800-53 Rev. 5 is the primary control framework. NIST SP 800-37, NIST SP 800-53A, NIST SP 800-207, and the CISA Zero Trust Maturity Model are supporting references where they fit the work shown here.
 
 > **Portfolio demonstration only.** This repository contains no sensitive, proprietary, or real federal agency data. It represents academic and portfolio work, not professional federal GRC experience.
 
@@ -15,8 +19,6 @@ The project shows how I went from identifying security issues to documenting ris
 - one control assessment using synthetic access data
 - remediation tracking through a POA&M-style artifact
 - policy requirements and a limited Zero Trust crosswalk
-
-NIST SP 800-53 is the main control framework. NIST SP 800-37, NIST SP 800-53A, NIST SP 800-207, and the CISA Zero Trust Maturity Model are supporting references where they fit the work shown here.
 
 This is not a complete federal RMF package or a full Zero Trust maturity assessment.
 
