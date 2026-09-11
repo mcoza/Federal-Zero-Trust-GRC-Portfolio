@@ -15,6 +15,7 @@ Determine whether user access matches approved role requirements.
 - **Risk:** R-001 Excessive user access
 - **Assessed control:** AC-6 Least Privilege
 - **Related remediation item:** POAM-001
+- **Remediation retest:** [08-retest-validation.md](08-retest-validation.md)
 
 AC-2 Account Management is related to the broader account lifecycle, but this exercise does not test the full AC-2 control.
 
@@ -70,11 +71,11 @@ Only two records contain observed groups that are not in the approved groups.
 - **Observed access:** Helpdesk-Users; Server-Admins
 - **Unsupported access:** Server-Admins
 
-## Assessment finding
+## Initial assessment finding
 
-**Other Than Satisfied**
+**Other Than Satisfied for the scoped AC-6 condition.**
 
-The AC-6 condition is not met across all 12 accounts because two contain access that is not supported by the approved role.
+The scoped condition is not met across all 12 accounts because two contain access that is not supported by the approved role.
 
 Put simply, least privilege is not being applied consistently in this example.
 
@@ -87,6 +88,8 @@ POAM-001 tracks these actions:
 3. Review the approved role mappings and the access approval or role change process related to the two exceptions.
 4. Retest the corrected accounts after remediation.
 5. Retain updated access evidence before closing the item.
+
+These actions were subsequently validated in [08-retest-validation.md](08-retest-validation.md). Both affected accounts passed the scoped retest, and POAM-001 was closed for this portfolio exercise.
 
 ## Traceability
 
@@ -101,15 +104,25 @@ Compare approved vs observed access
         ↓
 2 exceptions found
         ↓
-Assessment finding: Other Than Satisfied
+Initial scoped finding: Other Than Satisfied
         ↓
 POAM-001
         ↓
-Correct access + retain evidence + retest before closure
+Unsupported access removed
+        ↓
+Updated evidence reviewed
+        ↓
+2 of 2 affected accounts pass retest
+        ↓
+Scoped remediation validation: Satisfied
+        ↓
+POAM-001 Closed
 ```
 
 ## Limits of this example
 
-This is a focused portfolio exercise, not a complete NIST SP 800-53A assessment. It shows the basic process of setting a condition, reviewing evidence, identifying exceptions, reaching a finding, and tracing that finding into remediation.
+This is a focused portfolio exercise, not a complete NIST SP 800-53A assessment. It shows the basic process of setting a condition, reviewing evidence, identifying exceptions, reaching a finding, tracing that finding into remediation, and validating the correction.
+
+The successful retest closes the two identified exceptions only. It does not establish that every AC-6 determination or all access controls across the fictional environment are effective.
 
 Reference: NIST SP 800-53A Rev. 5, Assessing Security and Privacy Controls in Information Systems and Organizations.
