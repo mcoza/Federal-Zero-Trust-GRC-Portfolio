@@ -2,24 +2,24 @@
 
 ## How I use the tracker
 
-The remediation tracker is where a weakness turns into owned corrective work.
+The remediation tracker turns a problem into work with an owner, target date, evidence, and a closure decision.
 
-For each item, I want to know what the problem is, what risk and control it ties back to, who owns the fix, what has to happen before closure, and what evidence proves the work is actually done.
+For each item, I want to know what the problem is, which risk and controls it ties back to, who owns the fix, what has to happen before closure, and what evidence shows the work is done.
 
-The `Finding Source` field also matters. Some items came from a completed control review, while others are weaknesses built into the scenario. I keep those separate so the tracker does not make it look like I tested controls that I did not test.
+The `Source` field matters too. Some items came from a completed control review. Others are issues built into the scenario that have not been tested yet. Keeping those separate stops the tracker from implying more testing than actually happened.
 
 ## The flow
 
 | Step | What happens |
 |---:|---|
-| 1 | Identify the weakness or assessment finding |
-| 2 | Tie it back to the related risk and control |
+| 1 | Identify the issue or assessment finding |
+| 2 | Tie it to the related risk and controls |
 | 3 | Define the corrective action |
 | 4 | Assign an owner |
 | 5 | Set milestones and a target date |
 | 6 | Collect evidence that the work was completed |
 | 7 | Review the evidence or retest the condition |
-| 8 | Close the item when the scoped fix is supported by evidence |
+| 8 | Close the item when the fix is supported by evidence |
 
 ## Statuses
 
@@ -32,7 +32,7 @@ The `Finding Source` field also matters. Some items came from a completed contro
 
 ## Dates
 
-I use specific dates so the items read like real tracked work instead of vague “30-day” or “60-day” placeholders. The dates are part of the scenario, not universal federal deadlines.
+I use specific dates instead of vague 30-day or 60-day placeholders. The dates belong to this scenario and are not universal federal deadlines.
 
 ## What counts as closed
 
@@ -46,4 +46,4 @@ Fix completed
 → item closed
 ```
 
-That closure only applies to the weakness being tracked. It does not automatically mean the larger risk is gone or that the residual risk is acceptable.
+Closure applies to the issue being tracked. It does not automatically close the larger risk or establish an acceptable residual risk.

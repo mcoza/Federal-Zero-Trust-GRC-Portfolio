@@ -2,9 +2,7 @@
 
 ## What I tested
 
-This is the worked control assessment in the repo.
-
-I used the fictional access data to answer one question: **can these users do anything their approved roles do not allow?**
+I reviewed 12 fictional user accounts to answer one question: **can these users do anything their approved roles do not allow?**
 
 ## Related risk and control
 
@@ -13,7 +11,7 @@ I used the fictional access data to answer one question: **can these users do an
 - **Remediation item:** POAM-001
 - **Retest:** [08-remediation-validation.md](08-remediation-validation.md)
 
-AC-2 Account Management is related to the broader account lifecycle, but this dataset does not test that full process. I kept the assessment tied to AC-6 because that is what the evidence actually supports.
+AC-2 Account Management is related to the broader account lifecycle, but this dataset does not test that full process. I kept the assessment tied to AC-6 because that is what the evidence supports.
 
 ## Method
 
@@ -27,7 +25,7 @@ There are only 12 accounts in the dataset, so I reviewed all 12 instead of takin
 - approved access in the `Approved Access` field
 - actual access in the `Observed Access` field
 
-The CSV only contains the source data. I kept the pass/fail judgment here so I had to derive the result from the evidence instead of building the answer into the dataset.
+The CSV contains the source data. I kept the pass/fail judgment here so the result had to be derived from the evidence instead of being built into the dataset.
 
 ## What counts as a pass
 
@@ -61,7 +59,7 @@ If the user can do something outside that approved access, I record an exception
 
 **Other Than Satisfied for the scoped AC-6 condition.**
 
-Ten accounts stayed within their approved access, but two did not. That means least privilege was not being applied consistently across the records I reviewed.
+Ten accounts stayed within their approved access, but two did not. Least privilege was not being applied consistently across the records I reviewed.
 
 ## Remediation
 
@@ -90,6 +88,6 @@ R-001 Excessive user access
 
 ## What the result means
 
-The finding is limited to the access condition tested here. The successful retest closes these two exceptions; it does not prove that every part of AC-6 is effective across the entire environment.
+The finding is limited to the access condition tested here. The successful retest closes these two exceptions. It does not prove that every part of AC-6 is effective across the entire environment.
 
 Reference: NIST SP 800-53A Rev. 5, *Assessing Security and Privacy Controls in Information Systems and Organizations*.

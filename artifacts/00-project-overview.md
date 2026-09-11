@@ -2,9 +2,9 @@
 
 ## The scenario
 
-This project uses a fictional civilian federal environment with internal users, privileged administrators, remote access users, application servers, file shares, logging systems, backup systems, network infrastructure, and segmented network zones.
+This project follows a fictional civilian federal environment with internal users, privileged administrators, remote users, application servers, file shares, logging systems, backup systems, network infrastructure, and segmented network zones.
 
-Rather than model an entire agency, I kept the project centered on five security problems that are broad enough to show different parts of GRC work without turning the repo into a full federal authorization package.
+I kept the scope to five security problems so I could follow each one from risk to control, evidence, remediation, and status without turning the repo into a full federal authorization package.
 
 ## The five risk areas
 
@@ -14,26 +14,26 @@ Rather than model an entire agency, I kept the project centered on five security
 4. incomplete SIEM and logging coverage
 5. unvalidated backup and restore processes
 
-Each risk is tied to the controls that make sense for that problem, the evidence I would expect to review, and the remediation work needed if the condition is not acceptable.
+Each risk connects to controls that fit the problem, the evidence I would review, and the action needed if the control is not working as expected.
 
 ## Frameworks I used
 
-**Primary control framework**
+**Main control framework**
 
 - NIST SP 800-53 Rev. 5
 
 **Supporting references**
 
 - NIST SP 800-37 Rev. 2 for risk-management concepts
-- NIST SP 800-53A Rev. 5 for assessment terminology and methods
+- NIST SP 800-53A Rev. 5 for assessment methods and terminology
 - NIST SP 800-207 for Zero Trust architecture concepts
 - CISA Zero Trust Maturity Model for the Zero Trust relationships used in the project
 
-NIST SP 800-53 does most of the control-mapping work here. The other references help me decide how to assess the controls and how the risk areas relate to Zero Trust.
+NIST SP 800-53 gives me the controls. NIST SP 800-53A helps with how I assess them. NIST SP 800-37 adds risk-management context. NIST SP 800-207 and the CISA model help connect the work to Zero Trust.
 
 ## Where Zero Trust fits
 
-| Portfolio area | Zero Trust relationship |
+| Area | Zero Trust relationship |
 |---|---|
 | User and privileged access | Identity |
 | Segmentation, inter-zone traffic, and remote access | Networks |
@@ -44,11 +44,11 @@ I only use the parts of the Zero Trust models that connect to the work in this r
 
 ## How the project is organized
 
-| Area | Main artifacts |
+| Area | Main files |
 |---|---|
 | Risk | Risk summary, risk register, risk scoring |
 | Controls | Control mapping, security policy |
 | Evidence and assessment | Evidence review, access review, access control review |
 | Remediation and reporting | Remediation tracker, access retest, remediation validation |
 
-The main thing I wanted the repo to show is traceability: if I start with one of the five risks, I should be able to follow it into the controls, evidence, remediation, and status without having to guess how the pieces connect.
+The point is traceability. If I start with one of the five risks, I should be able to follow it into the controls, evidence, remediation, and current status without guessing how the pieces connect.

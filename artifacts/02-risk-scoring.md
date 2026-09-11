@@ -2,17 +2,17 @@
 
 ## How I score the risks
 
-I use a basic 5x5 likelihood and impact model to keep the ranking consistent across the five risks.
+I use a simple 5x5 likelihood and impact model so I can rank the five risks consistently.
 
 **Formula:** `Initial Risk Score = Likelihood × Impact`
 
-The score is a starting point, not a statistical prediction. I use it to compare the risks in this scenario before the recommended fixes are completed and validated.
+The score helps me compare priorities. It is not a statistical prediction.
 
 The number matters less than the reasoning behind it, so every risk in the register includes a short explanation for both likelihood and impact.
 
 ## Likelihood
 
-| Score | Likelihood | What I mean by it |
+| Score | Likelihood | How I use it |
 |---:|---|---|
 | 1 | Rare | Unlikely under normal conditions |
 | 2 | Unlikely | Possible, but not expected |
@@ -22,7 +22,7 @@ The number matters less than the reasoning behind it, so every risk in the regis
 
 ## Impact
 
-| Score | Impact | What I mean by it |
+| Score | Impact | How I use it |
 |---:|---|---|
 | 1 | Minimal | Limited operational, security, or compliance effect |
 | 2 | Minor | Some disruption or a relatively small control weakness |
@@ -38,13 +38,15 @@ The number matters less than the reasoning behind it, so every risk in the regis
 | 9-14 | Moderate |
 | 15-25 | High |
 
+These rating bands are defined for this project. They are not NIST-required thresholds. I use them consistently so the five risks can be compared the same way.
+
 ## The two questions I use
 
-1. **Likelihood:** Given the weakness and the threat path, how likely is the risk event in this scenario?
+1. **Likelihood:** Given the weakness and the threat path, how likely is the risk event?
 2. **Impact:** If it happens, how bad could the security, operational, recovery, or compliance impact be?
 
-That keeps the scoring simple enough to explain and consistent enough to prioritize the work.
+The score helps sort the risks. The rationale explains why the score makes sense.
 
 ## Residual risk
 
-I would only rescore a risk after there is evidence that the treatment actually changed the condition. A planned fix—or closing one narrow finding—is not enough by itself to say what the residual risk is.
+I would only rescore a risk after there is evidence that the treatment actually changed the condition. A planned fix or the closure of one narrow finding is not enough by itself to assign residual risk.

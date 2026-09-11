@@ -19,7 +19,7 @@ This policy defines security requirements for user access, privileged access, ne
 
 ## Scope
 
-This policy applies to the fictional federal environment used in the portfolio, including internal users, privileged users, remote access users, application servers, file shares, administrative systems, network infrastructure, SIEM/logging systems, backup systems, and DMZ systems.
+This policy applies to the fictional federal environment used in this project, including internal users, privileged users, remote access users, application servers, file shares, administrative systems, network infrastructure, SIEM/logging systems, backup systems, and DMZ systems.
 
 ## Roles and responsibilities
 
@@ -35,7 +35,7 @@ This policy applies to the fictional federal environment used in the portfolio, 
 
 ## Policy requirements
 
-### Role based access
+### Role-based access
 
 Access to systems and data must be based on documented job role requirements. Users must be granted only the access needed for approved business functions.
 
@@ -80,10 +80,10 @@ Exceptions must include:
 
 ## Evidence
 
-Evidence may include access review exports, RBAC matrices, privileged group exports, MFA configuration evidence, firewall and VPN rules, network diagrams, SIEM log source lists, alert examples, backup logs, restore test reports, and change approval records.
+Evidence may include user access reports, role matrices, privileged access reports, MFA configuration evidence, firewall and VPN rules, network diagrams, SIEM log source lists, alert examples, backup logs, restore test reports, and change approval records.
 
 ## Compliance and review
 
-Findings against this policy should be tracked through the portfolio remediation process. Closure requires evidence that the corrective action was completed and, where appropriate, retested or validated.
+Findings against this policy should be tracked through the remediation process. Closure requires evidence that the corrective action was completed and, where appropriate, retested or validated.
 
 This policy should be reviewed annually or after major changes to identity systems, network architecture, remote access methods, logging coverage, or backup and recovery processes.
