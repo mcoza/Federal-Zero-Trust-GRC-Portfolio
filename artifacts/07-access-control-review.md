@@ -4,7 +4,7 @@
 
 This is the worked control assessment in the repo.
 
-I used the fictional access data to answer one question: **do these users have only the group memberships their approved roles allow?**
+I used the fictional access data to answer one question: **can these users do anything their approved roles do not allow?**
 
 ## Related risk and control
 
@@ -24,16 +24,16 @@ There are only 12 accounts in the dataset, so I reviewed all 12 instead of takin
 ## Evidence
 
 - [07-access-review.csv](07-access-review.csv)
-- approved role-to-group assignments in the `Approved Groups` field
-- observed memberships in the `Observed Groups` field
+- approved access in the `Approved Access` field
+- actual access in the `Observed Access` field
 
 The CSV only contains the source data. I kept the pass/fail judgment here so I had to derive the result from the evidence instead of building the answer into the dataset.
 
 ## What counts as a pass
 
-Observed group membership should not include access that is unsupported by the approved role.
+A user passes when the observed access stays within what the approved role allows.
 
-For each account, I compared the approved groups with the observed groups. If the observed access stayed within the approved role, it passed. If there was extra unsupported access, I recorded an exception.
+If the user can do something outside that approved access, I record an exception.
 
 ## Results
 
@@ -47,31 +47,29 @@ For each account, I compared the approved groups with the observed groups. If th
 
 - **Account:** U-005
 - **Role:** Finance Analyst
-- **Approved access:** Finance-Read
-- **Observed access:** Finance-Read; Payroll-Write
-- **Unsupported access:** Payroll-Write
+- **Approved access:** View finance reports
+- **Extra access found:** Edit payroll records
 
 ### Exception A-02
 
 - **Account:** U-009
 - **Role:** Support Analyst
-- **Approved access:** Helpdesk-Users
-- **Observed access:** Helpdesk-Users; Server-Admins
-- **Unsupported access:** Server-Admins
+- **Approved access:** Work help desk tickets
+- **Extra access found:** Administer servers
 
 ## Finding
 
 **Other Than Satisfied for the scoped AC-6 condition.**
 
-Ten accounts matched their approved roles, but two did not. That means least privilege was not being applied consistently across the records I reviewed.
+Ten accounts stayed within their approved access, but two did not. That means least privilege was not being applied consistently across the records I reviewed.
 
 ## Remediation
 
 POAM-001 tracks the corrective work for the two exceptions:
 
-1. Remove Payroll-Write from U-005.
-2. Remove Server-Admins from U-009.
-3. Confirm the approved role baseline for both affected accounts and verify that there is no supporting approval or role-change record for the extra memberships.
+1. Remove the ability to edit payroll records from U-005.
+2. Remove server administrator access from U-009.
+3. Confirm the approved role baseline for both accounts and verify that there is no approval or role-change record supporting the extra access.
 4. Retest the corrected accounts.
 5. Keep the updated access evidence before closing the item.
 
@@ -82,7 +80,7 @@ The follow-up retest is documented in [08-remediation-validation.md](08-remediat
 ```text
 R-001 Excessive user access
 → AC-6 Least Privilege
-→ compare approved vs. observed access
+→ compare approved access with actual access
 → 2 exceptions
 → POAM-001
 → access corrected
