@@ -4,11 +4,9 @@
 
 This portfolio demonstrates an IT risk and control assessment workflow using a fictional civilian federal environment.
 
-The purpose is not to recreate the full NIST Risk Management Framework or produce a complete federal authorization package. Instead, the project focuses on the GRC work most relevant to risk and control-assessment roles: identifying and prioritizing risk, mapping risks to security controls, defining evidence expectations, assessing control effectiveness, documenting exceptions, and tracking remediation through validation.
+The project focuses on the GRC work most relevant to risk and control-assessment roles: identifying and prioritizing risk, mapping risks to security controls, defining evidence expectations, assessing control effectiveness, documenting exceptions, and tracking remediation through validation.
 
 NIST SP 800-53 Rev. 5 is the primary control framework. NIST SP 800-37, NIST SP 800-53A, NIST SP 800-207, and the CISA Zero Trust Maturity Model are supporting references where they fit the work shown here.
-
-> **Portfolio demonstration only.** This repository contains no sensitive, proprietary, or real federal agency data. It represents academic and portfolio work, not professional federal GRC experience.
 
 ## What this portfolio shows
 
@@ -20,8 +18,6 @@ NIST SP 800-53 Rev. 5 is the primary control framework. NIST SP 800-37, NIST SP 
 - remediation tracking through a POA&M-style artifact
 - remediation validation and closure through a scoped retest
 - policy requirements and a limited Zero Trust crosswalk
-
-This is not a complete federal RMF package or a full Zero Trust maturity assessment.
 
 ## Reasoning flow
 
@@ -109,8 +105,6 @@ Scoped remediation validation: Satisfied
 POAM-001 Closed
 ```
 
-## What this project does not cover
+## Residual risk
 
-The portfolio does not include a complete system categorization, control baseline tailoring package, SSP, SAP, SAR, authorization decision, or continuous monitoring program.
-
-I do not assign residual risk across the environment solely because one finding is closed. I would revisit residual risk after the relevant controls are implemented and validated across the intended scope.
+Residual risk is revisited only after the relevant controls are implemented and validated across the intended scope. Closing one scoped finding does not establish the residual risk of the broader environment.
