@@ -43,7 +43,7 @@ Across those areas, the repo includes risk scoring, control mapping, evidence pl
 | 04A | [Remediation Process](artifacts/04-remediation-process.md) | How I move a weakness from open to validated closure |
 | 05 | [Security Policy](artifacts/05-security-policy.md) | Security requirements and responsibilities for the scenario |
 | 06 | [Evidence Review](artifacts/06-evidence-review.csv) | What evidence I would ask for and how I would review it |
-| 07 | [Access Review](artifacts/07-access-review.csv) | Fictional account and group data used in the completed review |
+| 07 | [Access Review](artifacts/07-access-review.csv) | Fictional user access records used in the completed review |
 | 07A | [Access Control Review](artifacts/07-access-control-review.md) | The worked assessment, findings, and remediation link |
 | 08 | [Access Retest](artifacts/08-access-retest.csv) | Updated access data after the two exceptions were corrected |
 | 08A | [Remediation Validation](artifacts/08-remediation-validation.md) | The retest and closure decision for POAM-001 |
