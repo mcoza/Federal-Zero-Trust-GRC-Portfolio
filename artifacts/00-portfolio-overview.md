@@ -7,8 +7,7 @@
 | Document | Federal Zero Trust GRC Portfolio Overview |
 | Project Type | Graduate Capstone GRC Portfolio Project |
 | Author | Mark C. |
-| Version | 1.4 |
-| Disclaimer | For portfolio demonstration purposes only. This project is based on a graduate cybersecurity capstone and does not contain sensitive, proprietary, or real federal agency data. |
+| Version | 1.5 |
 
 ## Project background
 
@@ -28,7 +27,7 @@ The portfolio covers five risk themes:
 4. incomplete SIEM and logging coverage
 5. unvalidated backup and restore processes
 
-I kept the scope small on purpose. The goal is to show the full reasoning process, not recreate an entire federal RMF package.
+The scope is intentionally limited so the artifacts can show the reasoning and traceability across each stage of the assessment process.
 
 ## Framework use
 
@@ -73,26 +72,16 @@ The access review and remediation retest show that full chain for R-001 and the 
 | SIEM coverage and event review | Visibility and Analytics |
 | Risk, policy, evidence, and remediation tracking | Governance |
 
-This is only a limited crosswalk. I am not assigning maturity levels or claiming full coverage of the CISA model.
+The crosswalk shows only the relationships used in this project; no maturity levels are assigned.
 
-## What this project does not cover
+## Residual risk
 
-This project does not include:
+Residual risk is not calculated across the environment because the relevant controls have not been validated across the full scope. Closing one scoped finding is not enough to establish residual risk for the broader environment.
 
-- a complete system categorization
-- a full control baseline selection and tailoring package
-- an SSP
-- an SAP or SAR
-- an authorization decision
-- a continuous monitoring program
-- a full Zero Trust maturity assessment
+## Assessment scope
 
-I also do not calculate residual risk across the environment because the controls have not been validated across the full scope. Closing one scoped finding is not enough to establish residual risk for the broader environment.
+The synthetic access review assesses whether observed access matches approved role access for the scoped AC-6 condition.
 
-## What the access review and retest actually test
+AC-2 Account Management is related to the broader account lifecycle, but it is not assessed by this exercise.
 
-The synthetic access review checks one condition: whether observed access matches approved role access.
-
-I use that as a focused AC-6 Least Privilege assessment example. AC-2 Account Management is related to the broader account lifecycle, but this exercise does not test the full AC-2 control.
-
-The remediation retest is narrower still: it validates that the two unsupported group memberships identified in the original assessment were removed. It does not establish full AC-6 effectiveness across the fictional environment.
+The remediation retest validates correction of the two unsupported group memberships identified in the original assessment. Broader AC-6 effectiveness remains outside the scope of that retest.
