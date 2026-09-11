@@ -1,3 +1,3 @@
-"Account ID","Role","Approved Groups","Pre-Remediation Observed Groups","Remediation Performed","Post-Remediation Observed Groups","Retest Result"
-"U-005","Finance Analyst","Finance-Read","Finance-Read; Payroll-Write","Removed Payroll-Write","Finance-Read","Pass"
-"U-009","Support Analyst","Helpdesk-Users","Helpdesk-Users; Server-Admins","Removed Server-Admins","Helpdesk-Users","Pass"
+"Account ID","Role","Approved Access","Access Before Fix","Fix Applied","Access After Fix","Retest Result"
+"U-005","Finance Analyst","View finance reports","View finance reports; Edit payroll records","Removed ability to edit payroll records","View finance reports","Pass"
+"U-009","Support Analyst","Work help desk tickets","Work help desk tickets; Administer servers","Removed server administrator access","Work help desk tickets","Pass"
