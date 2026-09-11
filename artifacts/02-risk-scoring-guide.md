@@ -4,11 +4,11 @@
 
 This portfolio uses a simple 5x5 likelihood and impact model to rank risks.
 
-**Formula:** `Inherent Risk Score = Likelihood × Impact`
+**Formula:** `Initial Risk Score = Likelihood × Impact`
 
-Inherent risk is the level of risk before additional remediation is validated.
+The initial risk score reflects the scenario conditions before the recommended treatment actions are completed and validated. It is used to prioritize the risks in this project; it is not intended to represent a statistical probability or a formal enterprise risk model.
 
-The numbers are not statistical probabilities. They are judgments based on the condition, affected area, threat path, and expected impact. Each risk in the register includes a short explanation for the likelihood and impact scores.
+Each risk in the register includes a short explanation for the likelihood and impact scores so the reasoning can be reviewed alongside the number.
 
 ## Likelihood scale
 
@@ -42,11 +42,11 @@ The numbers are not statistical probabilities. They are judgments based on the c
 
 I ask two questions:
 
-1. **Likelihood:** Given the weakness and threat path, how likely is this to happen?
-2. **Impact:** If it happens, how serious would the security, operational, recovery, or compliance impact be?
+1. **Likelihood:** Given the weakness and threat path, how likely is the risk event under the scenario conditions?
+2. **Impact:** If it occurs, how serious would the security, operational, recovery, or compliance impact be?
 
-I include the written rationale so someone else can see why I chose the score. The number helps rank the risks, but the explanation matters more than the number by itself.
+The number helps rank the risks, but the written rationale matters more than the number by itself.
 
 ## Residual risk
 
-I would only score residual risk after I had evidence that the controls were implemented and working. A planned fix by itself is not enough.
+Residual risk would be considered after relevant treatment actions are implemented and there is evidence showing how the control environment changed. A planned remediation or the closure of one narrow finding is not enough by itself to determine the broader residual risk.
