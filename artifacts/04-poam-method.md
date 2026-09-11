@@ -1,47 +1,49 @@
 # 04A - POA&M Method
 
-## Purpose
+## How I use the tracker
 
-This tracker records weaknesses and findings, related risks and controls, remediation work, action owners, target dates, status, and closure evidence.
+The POA&M tracker is where a weakness turns into owned corrective work.
 
-The `Finding Source` field distinguishes a completed control-assessment finding from a weakness established by the scenario or baseline review. This prevents the tracker from implying that every open item came from a completed assessment.
+For each item, I want to know what the problem is, what risk and control it ties back to, who owns the fix, what has to happen before closure, and what evidence proves the work is actually done.
 
-## POA&M flow
+The `Finding Source` field also matters. Some items came from a completed control assessment, while others are weaknesses built into the scenario. I keep those separate so the tracker does not make it look like I tested controls that I did not test.
 
-| Step | Action |
+## The flow
+
+| Step | What happens |
 |---:|---|
 | 1 | Identify the weakness or assessment finding |
-| 2 | Trace it to the related risk and control |
+| 2 | Tie it back to the related risk and control |
 | 3 | Define the corrective action |
-| 4 | Assign an action owner |
+| 4 | Assign an owner |
 | 5 | Set milestones and a target date |
-| 6 | Collect closure evidence |
-| 7 | Review the evidence or perform a retest |
-| 8 | Close the item only when the scoped corrective action is validated |
+| 6 | Collect evidence that the work was completed |
+| 7 | Review the evidence or retest the condition |
+| 8 | Close the item when the scoped fix is supported by evidence |
 
-## Status definitions
+## Statuses
 
 | Status | Meaning |
 |---|---|
-| Open | Remediation has not started or is waiting for action |
-| In Progress | Remediation has started but closure evidence is not complete |
-| Pending Validation | Remediation is complete but the evidence or retest still needs review |
-| Closed | The scoped remediation and validation are complete and closure evidence is retained |
+| Open | Work has not started or is waiting for action |
+| In Progress | Work has started, but the item is not ready for validation |
+| Pending Validation | The fix is complete and waiting for evidence review or retest |
+| Closed | The fix was validated and the closure evidence is retained |
 
 ## Dates
 
-The tracker uses specific project dates rather than relative values such as 30 or 60 days. These dates support tracking within the scenario and are not treated as universal federal deadlines.
+I use specific dates so the items read like real tracked work instead of vague “30-day” or “60-day” placeholders. The dates are part of the scenario, not universal federal deadlines.
 
-## Closure rule
+## What counts as closed
 
-A remediation item is not closed merely because the action owner reports that the work is complete.
+An item is not closed just because the owner says it is fixed.
 
 ```text
-Corrective action completed
+Fix completed
 → closure evidence received
 → evidence reviewed or retest performed
-→ scoped condition verified
+→ condition verified
 → item closed
 ```
 
-Closure applies to the finding or weakness being tracked. It does not automatically mean the broader related risk is fully resolved or that residual risk is acceptable.
+That closure only applies to the weakness being tracked. It does not automatically mean the larger risk is gone or that the residual risk is acceptable.
