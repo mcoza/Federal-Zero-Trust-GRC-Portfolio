@@ -4,7 +4,7 @@
 
 This is the follow-up to the access-control review in [07-access-control-review.md](07-access-control-review.md).
 
-The question here is simple: **were the two unsupported group memberships actually removed, and do the affected accounts now match their approved roles?**
+The question is simple: **was the extra access removed, and are both users now limited to what their roles allow?**
 
 ## Related items
 
@@ -17,37 +17,37 @@ The question here is simple: **were the two unsupported group memberships actual
 
 I used the **examine** method from NIST SP 800-53A Rev. 5 and compared the original exceptions with the updated evidence for U-005 and U-009.
 
-The approved role mappings did not change:
+The approved role access did not change:
 
-- Finance Analyst → Finance-Read
-- Support Analyst → Helpdesk-Users
+- Finance Analyst: View finance reports
+- Support Analyst: Work help desk tickets
 
-There was no approval or role-change record supporting the extra Payroll-Write or Server-Admins memberships, so both remained exceptions until they were removed.
+There was no approval or role-change record supporting the extra ability to edit payroll records or administer servers, so both remained exceptions until that access was removed.
 
 ## Retest results
 
-| Account | Original problem | Post-remediation access | Result |
+| Account | Original problem | Access after fix | Result |
 |---|---|---|---|
-| U-005 | Payroll-Write exceeded the Finance Analyst role | Finance-Read | Pass |
-| U-009 | Server-Admins exceeded the Support Analyst role | Helpdesk-Users | Pass |
+| U-005 | Finance Analyst could edit payroll records | View finance reports | Pass |
+| U-009 | Support Analyst could administer servers | Work help desk tickets | Pass |
 
-Both accounts now match the approved role baseline used in the original review.
+Both accounts now stay within the approved access for their roles.
 
 ## Decision
 
 **Satisfied for the scoped remediation retest.**
 
-The two exceptions were corrected, the updated evidence matches the approved roles, and both accounts passed the retest. That is enough to close POAM-001.
+The extra access was removed, the updated evidence matches the approved roles, and both accounts passed the retest. That is enough to close POAM-001.
 
 **POAM-001 status: Closed**
 
 Closure is supported by:
 
-1. Payroll-Write removed from U-005
-2. Server-Admins removed from U-009
-3. approved role mappings confirmed
-4. updated access evidence retained
-5. both accounts passing the retest
+1. U-005 can no longer edit payroll records
+2. U-009 no longer has server administrator access
+3. approved role access was confirmed
+4. updated access evidence was retained
+5. both accounts passed the retest
 
 ## What this closes
 
