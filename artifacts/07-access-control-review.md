@@ -24,15 +24,14 @@ There are only 12 accounts in the dataset, so I reviewed all 12 instead of takin
 - [07-access-review.csv](07-access-review.csv)
 - approved access in the `Approved Access` field
 - actual access in the `Observed Access` field
-- approval or role-change records when observed access falls outside the approved role
 
-The CSV contains the account and access data. For the two accounts with extra access, I also checked whether any approval or role-change record supported it. None did.
+The `Approved Access` field is the authorization baseline for this scenario. No separate exception is documented for U-005 or U-009.
 
 ## What counts as a pass
 
-A user passes when the observed access is supported by the approved role or another documented approval.
+A user passes when the observed access stays within the approved access for the role.
 
-If the user can do something outside that approved access and there is no supporting approval, I record an exception.
+If the user can do something outside that approved access and there is no documented exception, I record an exception.
 
 ## Results
 
@@ -68,7 +67,7 @@ POAM-001 tracks the corrective work for the two exceptions:
 
 1. Remove the ability to edit payroll records from U-005.
 2. Remove server administrator access from U-009.
-3. Confirm the approved role baseline for both accounts and verify that there is no approval or role-change record supporting the extra access.
+3. Confirm the approved role baseline for both accounts and confirm that no documented exception supports the extra access.
 4. Retest the corrected accounts.
 5. Keep the updated access evidence before closing the item.
 
