@@ -2,34 +2,30 @@
 
 ## Purpose
 
-This matrix maps the portfolio risks to selected NIST SP 800-53 Rev. 5 controls. I use it to show why a control fits a risk, what I expect the control to do, and what evidence I would need to check it.
-
-I am only showing the control mapping needed for this portfolio, not the full RMF Select process.
+This matrix maps the portfolio risks to selected NIST SP 800-53 Rev. 5 controls. It shows why each control fits the risk, the condition the control is expected to support, and the evidence needed to evaluate that condition.
 
 ## Mapping logic
 
-| Step | Action | Example |
-|---:|---|---|
-| 1 | Identify the risk condition | Excessive user access |
-| 2 | Identify the control family | AC - Access Control |
-| 3 | Select the most relevant control or enhancement | AC-6 Least Privilege |
-| 4 | Explain why it applies | The risk comes from access exceeding role requirements |
-| 5 | Define the expected condition | User permissions match approved role and business need |
-| 6 | Identify evidence | Approved role matrix, group membership export, access review results |
-| 7 | Review the evidence when available | Compare observed access with approved access |
-| 8 | Trace exceptions to remediation | Assessment finding to POA&M item and retest evidence |
+| Step | Action |
+|---:|---|
+| 1 | Identify the risk condition and affected area |
+| 2 | Identify the control family most directly related to the condition |
+| 3 | Select the control or enhancement that best addresses the risk |
+| 4 | Explain why the control applies |
+| 5 | Define the expected control condition |
+| 6 | Identify evidence that could support or contradict that condition |
+| 7 | Review the evidence when an assessment is performed |
+| 8 | Trace confirmed findings to remediation and validation |
 
 ## Keep the mapping as narrow as the evidence
 
-I only mark a control as assessed when the evidence actually tests that control condition.
+A related control is not automatically an assessed control.
 
-The access review compares approved access with observed access, so that assessment is scoped to AC-6 Least Privilege.
-
-AC-2 Account Management is related to account lifecycle and review, but the access review dataset does not test the full AC-2 lifecycle. I do not mark AC-2 as assessed from that exercise.
+The matrix distinguishes between controls that are planned or mapped and controls that have actually been evaluated with evidence. Assessment status is only updated when the available evidence supports testing the stated condition.
 
 ## Control precision
 
-When a specific control enhancement matches the requirement better than the parent control, I use the enhancement.
+When a control enhancement matches the requirement more precisely than the parent control, the enhancement is used.
 
 Example:
 
@@ -38,9 +34,19 @@ Privileged MFA
 → IA-2(1)
 ```
 
+Configuration management is another example of this distinction:
+
+```text
+Approved baseline configuration
+→ CM-2
+
+Review and approval of configuration changes
+→ CM-3
+```
+
 ## Implementation type
 
-The `Implementation Type` column is just a quick description of how the control is carried out in this scenario. These are not official NIST control classifications.
+The `Implementation Type` column is a project-level description of how the control is carried out in the scenario. These are not official NIST control classifications.
 
 | Type | Meaning here |
 |---|---|
@@ -51,16 +57,16 @@ The `Implementation Type` column is just a quick description of how the control 
 
 ## Traceability rule
 
-A control should have a clear reason for being there. I use this chain:
+Each mapped control should have a clear path back to the risk and forward to the evidence:
 
 ```text
 Risk
 → Control
 → Expected condition
 → Evidence
-→ Assessment result
+→ Assessment result when tested
 → Finding if needed
-→ Remediation
+→ Remediation and validation
 ```
 
-Remote access is tied to R-003 through AC-17 instead of appearing only in the evidence checklist.
+The matrix is intentionally limited to the controls needed to explain the five portfolio risks rather than attempting to reproduce a full control baseline.
