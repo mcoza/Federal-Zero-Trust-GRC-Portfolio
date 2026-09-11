@@ -39,7 +39,7 @@ Across those areas, the repo includes risk scoring, control mapping, evidence pl
 | 02A | [Risk Scoring](artifacts/02-risk-scoring.md) | How I score and rank the risks |
 | 03 | [Control Mapping](artifacts/03-control-mapping.csv) | Which controls matter, what I am checking, and what evidence I would review |
 | 03A | [Control Mapping Notes](artifacts/03-control-mapping-notes.md) | How I choose controls and keep the mapping tied to evidence |
-| 04 | [Remediation Tracker](artifacts/04-remediation-tracker.csv) | Findings, owners, milestones, dates, status, and closure evidence |
+| 04 | [Remediation Tracker](artifacts/04-remediation-tracker.csv) | Issues, related controls, owners, milestones, dates, status, closure requirements, and evidence |
 | 04A | [Remediation Process](artifacts/04-remediation-process.md) | How I move an issue from open to validated closure |
 | 05 | [Security Policy](artifacts/05-security-policy.md) | Security requirements and responsibilities for the scenario |
 | 06 | [Evidence Review](artifacts/06-evidence-review.csv) | What evidence I would ask for and how I would check it |
