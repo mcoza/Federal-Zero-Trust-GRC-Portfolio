@@ -1,12 +1,12 @@
-# 04A - POA&M Method
+# 04A - Remediation Process
 
 ## How I use the tracker
 
-The POA&M tracker is where a weakness turns into owned corrective work.
+The remediation tracker is where a weakness turns into owned corrective work.
 
 For each item, I want to know what the problem is, what risk and control it ties back to, who owns the fix, what has to happen before closure, and what evidence proves the work is actually done.
 
-The `Finding Source` field also matters. Some items came from a completed control assessment, while others are weaknesses built into the scenario. I keep those separate so the tracker does not make it look like I tested controls that I did not test.
+The `Finding Source` field also matters. Some items came from a completed control review, while others are weaknesses built into the scenario. I keep those separate so the tracker does not make it look like I tested controls that I did not test.
 
 ## The flow
 

@@ -1,4 +1,4 @@
-# 00 - Portfolio Overview
+# 00 - Project Overview
 
 ## The scenario
 
@@ -46,9 +46,9 @@ I only use the parts of the Zero Trust models that connect to the work in this r
 
 | Area | Main artifacts |
 |---|---|
-| Risk | Executive risk summary, risk register, scoring guide |
-| Controls | Control mapping matrix, security control policy |
-| Evidence and assessment | Evidence checklist, access review data, control assessment |
-| Remediation and reporting | POA&M tracker, retest evidence, validation result |
+| Risk | Risk summary, risk register, risk scoring |
+| Controls | Control mapping, security policy |
+| Evidence and assessment | Evidence review, access review, access control review |
+| Remediation and reporting | Remediation tracker, access retest, remediation validation |
 
 The main thing I wanted the repo to show is traceability: if I start with one of the five risks, I should be able to follow it into the controls, evidence, remediation, and status without having to guess how the pieces connect.

@@ -1,4 +1,4 @@
-# 03A - Control Mapping Method
+# 03A - Control Mapping Notes
 
 ## How I map controls
 

@@ -1,8 +1,8 @@
-# 08 - AC-6 Remediation Retest and Validation
+# 08 - Remediation Validation
 
 ## What I was checking
 
-This is the follow-up to the access-control assessment in [07-control-assessment.md](07-control-assessment.md).
+This is the follow-up to the access-control review in [07-access-control-review.md](07-access-control-review.md).
 
 The question here is simple: **were the two unsupported group memberships actually removed, and do the affected accounts now match their approved roles?**
 
@@ -11,7 +11,7 @@ The question here is simple: **were the two unsupported group memberships actual
 - **Risk:** R-001 Excessive user access
 - **Control:** AC-6 Least Privilege
 - **Remediation item:** POAM-001
-- **Updated evidence:** [08-synthetic-access-retest.csv](08-synthetic-access-retest.csv)
+- **Updated evidence:** [08-access-retest.csv](08-access-retest.csv)
 
 ## Method
 
@@ -31,7 +31,7 @@ There was no approval or role-change record supporting the extra Payroll-Write o
 | U-005 | Payroll-Write exceeded the Finance Analyst role | Finance-Read | Pass |
 | U-009 | Server-Admins exceeded the Support Analyst role | Helpdesk-Users | Pass |
 
-Both accounts now match the approved role baseline used in the original assessment.
+Both accounts now match the approved role baseline used in the original review.
 
 ## Decision
 
@@ -51,4 +51,4 @@ Closure is supported by:
 
 ## What this closes
 
-This closes the two findings from the original assessment. It does not prove that every part of AC-6 is working across the entire environment, which is why the broader R-001 risk remains open.
+This closes the two findings from the original review. It does not prove that every part of AC-6 is working across the entire environment, which is why the broader R-001 risk remains open.

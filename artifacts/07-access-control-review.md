@@ -1,17 +1,17 @@
-# 07A - Control Assessment
+# 07A - Access Control Review
 
 ## What I tested
 
 This is the worked control assessment in the repo.
 
-I used the synthetic access data to answer one question: **do these users have only the group memberships their approved roles allow?**
+I used the fictional access data to answer one question: **do these users have only the group memberships their approved roles allow?**
 
 ## Related risk and control
 
 - **Risk:** R-001 Excessive user access
 - **Assessed control:** AC-6 Least Privilege
 - **Remediation item:** POAM-001
-- **Retest:** [08-retest-validation.md](08-retest-validation.md)
+- **Retest:** [08-remediation-validation.md](08-remediation-validation.md)
 
 AC-2 Account Management is related to the broader account lifecycle, but this dataset does not test that full process. I kept the assessment tied to AC-6 because that is what the evidence actually supports.
 
@@ -23,7 +23,7 @@ There are only 12 accounts in the dataset, so I reviewed all 12 instead of takin
 
 ## Evidence
 
-- [07-synthetic-access-review.csv](07-synthetic-access-review.csv)
+- [07-access-review.csv](07-access-review.csv)
 - approved role-to-group assignments in the `Approved Groups` field
 - observed memberships in the `Observed Groups` field
 
@@ -75,7 +75,7 @@ POAM-001 tracks the corrective work for the two exceptions:
 4. Retest the corrected accounts.
 5. Keep the updated access evidence before closing the item.
 
-The follow-up retest is documented in [08-retest-validation.md](08-retest-validation.md).
+The follow-up retest is documented in [08-remediation-validation.md](08-remediation-validation.md).
 
 ## Traceability
 

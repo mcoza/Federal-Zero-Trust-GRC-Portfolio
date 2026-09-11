@@ -18,7 +18,7 @@ The project covers five risk areas:
 - SIEM and logging coverage
 - backup and restore validation
 
-Across those areas, the repo includes risk scoring, control mapping, evidence planning, a security policy, remediation tracking, executive reporting, and one worked control assessment carried through retesting and closure.
+Across those areas, the repo includes risk scoring, control mapping, evidence planning, a security policy, remediation tracking, executive reporting, and one worked access-control review carried through retesting and closure.
 
 ## Current snapshot
 
@@ -33,20 +33,20 @@ Across those areas, the repo includes risk scoring, control mapping, evidence pl
 
 | # | Artifact | What it is for |
 |---|---|---|
-| 00 | [Portfolio Overview](artifacts/00-portfolio-overview.md) | Scenario, scope, framework use, and Zero Trust relationships |
-| 01 | [Executive Risk Summary](artifacts/01-executive-risk-summary.md) | Priority risks, business impact, completed assessment result, and next actions |
+| 00 | [Project Overview](artifacts/00-project-overview.md) | Scenario, scope, framework use, and Zero Trust relationships |
+| 01 | [Risk Summary](artifacts/01-risk-summary.md) | Priority risks, business impact, completed assessment result, and next actions |
 | 02 | [Risk Register](artifacts/02-risk-register.csv) | Risk statements, scores, rationale, treatment, owners, and evidence needs |
-| 02A | [Risk Scoring Guide](artifacts/02-risk-scoring-guide.md) | The 5x5 scoring method I use to rank the risks |
-| 03 | [Control Mapping Matrix](artifacts/03-control-mapping-matrix.csv) | Risk-to-control mapping, expected conditions, evidence, and status |
-| 03A | [Control Mapping Method](artifacts/03-control-mapping-method.md) | How I decide which controls belong and what would count as evidence |
-| 04 | [POA&M-Style Remediation Tracker](artifacts/04-poam-remediation-tracker.csv) | Findings, owners, milestones, dates, status, and closure evidence |
-| 04A | [POA&M Method](artifacts/04-poam-method.md) | How I move a weakness from open to validated closure |
-| 05 | [Security Control Policy](artifacts/05-security-control-policy.md) | Security requirements and responsibilities for the scenario |
-| 06 | [Evidence Checklist](artifacts/06-evidence-checklist.csv) | What evidence I would ask for and how I would review it |
-| 07 | [Access Review Evidence](artifacts/07-synthetic-access-review.csv) | Synthetic source data used in the completed control assessment |
-| 07A | [Control Assessment](artifacts/07-control-assessment.md) | The worked assessment, findings, and remediation link |
-| 08 | [Remediation Retest Evidence](artifacts/08-synthetic-access-retest.csv) | Updated evidence after the two access exceptions were corrected |
-| 08A | [Retest and Validation](artifacts/08-retest-validation.md) | The retest and closure decision for POAM-001 |
+| 02A | [Risk Scoring](artifacts/02-risk-scoring.md) | The 5x5 scoring method I use to rank the risks |
+| 03 | [Control Mapping](artifacts/03-control-mapping.csv) | Risk-to-control mapping, expected conditions, evidence, and status |
+| 03A | [Control Mapping Notes](artifacts/03-control-mapping-notes.md) | How I decide which controls belong and what would count as evidence |
+| 04 | [Remediation Tracker](artifacts/04-remediation-tracker.csv) | Findings, owners, milestones, dates, status, and closure evidence |
+| 04A | [Remediation Process](artifacts/04-remediation-process.md) | How I move a weakness from open to validated closure |
+| 05 | [Security Policy](artifacts/05-security-policy.md) | Security requirements and responsibilities for the scenario |
+| 06 | [Evidence Review](artifacts/06-evidence-review.csv) | What evidence I would ask for and how I would review it |
+| 07 | [Access Review](artifacts/07-access-review.csv) | Fictional account and group data used in the completed review |
+| 07A | [Access Control Review](artifacts/07-access-control-review.md) | The worked assessment, findings, and remediation link |
+| 08 | [Access Retest](artifacts/08-access-retest.csv) | Updated access data after the two exceptions were corrected |
+| 08A | [Remediation Validation](artifacts/08-remediation-validation.md) | The retest and closure decision for POAM-001 |
 
 ## How the pieces fit together
 

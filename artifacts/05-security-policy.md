@@ -1,10 +1,10 @@
-# 05 - Security Control Policy
+# 05 - Security Policy
 
 ## Document control
 
 | Field | Value |
 |---|---|
-| Document | Security Control Policy |
+| Document | Security Policy |
 | Project | Federal Zero Trust GRC Portfolio |
 | Author | Mark C. |
 | Version | 1.1 |
