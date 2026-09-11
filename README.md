@@ -18,6 +18,7 @@ NIST SP 800-53 Rev. 5 is the primary control framework. NIST SP 800-37, NIST SP 
 - evidence planning
 - one control assessment using synthetic access data
 - remediation tracking through a POA&M-style artifact
+- remediation validation and closure through a scoped retest
 - policy requirements and a limited Zero Trust crosswalk
 
 This is not a complete federal RMF package or a full Zero Trust maturity assessment.
@@ -54,11 +55,12 @@ The main point is simple: evidence is not proof by itself. I have to compare it 
 ## Current portfolio snapshot
 
 - **Risks identified:** 5
-- **High risks:** 4
-- **POA&M items:** 5
-- **Evidence items:** 8
+- **High inherent risks:** 4
+- **POA&M items:** 5 (1 closed, 4 open)
+- **Evidence requirements defined:** 8
 - **Control assessments:** 1
-- **Access review exceptions:** 2
+- **Completed remediation retests:** 1
+- **Access review exceptions:** 2 (remediated and retested)
 
 ## Artifacts
 
@@ -70,14 +72,16 @@ The main point is simple: evidence is not proof by itself. I have to compare it 
 | 02A | [Risk Scoring Guide](artifacts/02-risk-scoring-guide.md) | 5x5 scoring method and rating thresholds |
 | 03 | [Control Mapping Matrix](artifacts/03-control-mapping-matrix.csv) | Risk-to-control mapping, expected implementation, evidence, and status |
 | 03A | [Control Mapping Method](artifacts/03-control-mapping-method.md) | How I selected controls and traced them to evidence and remediation |
-| 04 | [POA&M-Style Remediation Tracker](artifacts/04-poam-remediation-tracker.csv) | Findings, milestones, owners, dates, and closure evidence |
+| 04 | [POA&M-Style Remediation Tracker](artifacts/04-poam-remediation-tracker.csv) | Findings, source, milestones, owners, dates, and closure evidence |
 | 04A | [POA&M Method](artifacts/04-poam-method.md) | Remediation and closure logic |
 | 05 | [Security Control Policy](artifacts/05-security-control-policy.md) | Control requirements and responsibilities for the scenario |
 | 06 | [Evidence Checklist](artifacts/06-evidence-checklist.csv) | Expected control conditions, evidence artifacts, and validation methods |
-| 07 | [Access Review Evidence](artifacts/07-synthetic-access-review.csv) | Synthetic account and group data used in the assessment |
-| 07A | [Control Assessment](artifacts/07-control-assessment.md) | AC-6 assessment criteria, exceptions, conclusion, and remediation traceability |
+| 07 | [Access Review Evidence](artifacts/07-synthetic-access-review.csv) | Synthetic account and group data used in the initial assessment |
+| 07A | [Control Assessment](artifacts/07-control-assessment.md) | Scoped AC-6 assessment criteria, exceptions, conclusion, and remediation traceability |
+| 08 | [Remediation Retest Evidence](artifacts/08-synthetic-access-retest.csv) | Updated synthetic evidence for the two corrected access exceptions |
+| 08A | [Retest and Validation](artifacts/08-retest-validation.md) | Remediation validation, scoped retest conclusion, and POAM-001 closure |
 
-## Example: R-001 from risk to remediation
+## Example: R-001 from risk to closure
 
 ```text
 R-001 Excessive user access
@@ -90,15 +94,23 @@ Synthetic access evidence
         ↓
 2 of 12 records contain unsupported access
         ↓
-Assessment finding: Other Than Satisfied
+Initial assessment: Other Than Satisfied
         ↓
 POAM-001
         ↓
-Correct access, retain evidence, and retest before closure
+Unsupported access removed
+        ↓
+Updated evidence reviewed and affected accounts retested
+        ↓
+2 of 2 retest records pass
+        ↓
+Scoped remediation validation: Satisfied
+        ↓
+POAM-001 Closed
 ```
 
 ## What this project does not cover
 
 The portfolio does not include a complete system categorization, control baseline tailoring package, SSP, SAP, SAR, authorization decision, or continuous monitoring program.
 
-I also do not assign residual risk just because remediation is planned. I would revisit residual risk after there is evidence that the controls are implemented and working.
+I do not assign residual risk across the environment solely because one finding is closed. I would revisit residual risk after the relevant controls are implemented and validated across the intended scope.
