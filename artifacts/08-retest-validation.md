@@ -4,8 +4,6 @@
 
 This artifact completes the remediation lifecycle for the two access exceptions identified in the R-001 / AC-6 assessment.
 
-The evidence is synthetic and is used only for portfolio demonstration.
-
 ## Related items
 
 - **Risk:** R-001 Excessive user access
@@ -46,9 +44,9 @@ Both affected accounts now match the approved role requirements used in the scop
 
 **Satisfied for the scoped remediation retest.**
 
-The two exceptions identified in the original AC-6 assessment were corrected in the synthetic evidence. POAM-001 can therefore be closed for this portfolio exercise.
+The two exceptions identified in the original AC-6 assessment were corrected in the updated evidence. POAM-001 can therefore be closed.
 
-This conclusion is deliberately narrow. It validates remediation of the two identified exceptions; it does not establish that every AC-6 determination or all access controls across the fictional environment are effective.
+The conclusion applies to remediation of the two identified exceptions. Broader AC-6 effectiveness would require additional assessment evidence.
 
 ## Closure decision
 
@@ -85,7 +83,3 @@ Scoped remediation validation: Satisfied
         ↓
 POAM-001 Closed
 ```
-
-## Limits
-
-This is a focused synthetic remediation and retest exercise. It demonstrates closure logic for a portfolio finding and does not represent production audit evidence, a complete NIST SP 800-53A assessment, or a determination that the broader environment has no residual access risk.
