@@ -24,13 +24,13 @@ Each risk connects to controls that fit the problem, the evidence I would review
 
 **Supporting references**
 
-- NIST SP 800-37 Rev. 2 for risk-management roles and RMF context
+- NIST SP 800-37 Rev. 2 for RMF roles and system-level risk-management context
 - NIST SP 800-53A Rev. 5 for assessment methods and terminology
-- NIST Cybersecurity Framework 2.0 for governance, roles, responsibilities, and authorities
+- NIST SP 1308 for Risk Owner and Risk Action Owner terminology and cybersecurity risk accountability
 - NIST SP 800-207 for Zero Trust architecture concepts
 - CISA Zero Trust Maturity Model for the Zero Trust relationships used in the project
 
-NIST SP 800-53 gives me the controls. NIST SP 800-53A helps with how I assess them. NIST SP 800-37 and the CSF add governance and risk-management context. NIST SP 800-207 and the CISA model help connect the work to Zero Trust.
+NIST SP 800-53 gives me the controls. NIST SP 800-53A helps with how I assess them. NIST SP 800-37 and NIST SP 1308 add governance and risk-management context. NIST SP 800-207 and the CISA model help connect the work to Zero Trust.
 
 ## Governance roles
 

@@ -6,7 +6,7 @@ This repo started as my graduate cybersecurity capstone. I rebuilt it around a f
 
 I use the scenario to write and prioritize risks, assign ownership, choose controls that fit, decide what evidence matters, document findings, and follow remediation through validation.
 
-NIST SP 800-53 Rev. 5 is the main control framework. NIST SP 800-37, NIST SP 800-53A, the NIST Cybersecurity Framework 2.0, NIST SP 800-207, and the CISA Zero Trust Maturity Model provide supporting risk, assessment, governance, and Zero Trust context.
+NIST SP 800-53 Rev. 5 is the main control framework. NIST SP 800-37, NIST SP 800-53A, NIST SP 1308, NIST SP 800-207, and the CISA Zero Trust Maturity Model provide supporting risk, assessment, governance, and Zero Trust context.
 
 ## What is in the repo
 
