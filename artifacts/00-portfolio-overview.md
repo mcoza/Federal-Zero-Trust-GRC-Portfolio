@@ -7,7 +7,7 @@
 | Document | Federal Zero Trust GRC Portfolio Overview |
 | Project Type | Graduate Capstone GRC Portfolio Project |
 | Author | Mark C. |
-| Version | 1.3 |
+| Version | 1.4 |
 | Disclaimer | For portfolio demonstration purposes only. This project is based on a graduate cybersecurity capstone and does not contain sensitive, proprietary, or real federal agency data. |
 
 ## Project background
@@ -16,7 +16,7 @@ This portfolio focuses on unauthorized access risk in a fictional civilian feder
 
 The environment includes internal users, privileged administrators, remote access users, application servers, file shares, logging systems, backup systems, network infrastructure, and segmented network zones.
 
-I reorganized the capstone into GRC artifacts so you can follow how I got from a security issue to the risk, controls, evidence, finding, and remediation.
+I reorganized the capstone into GRC artifacts so you can follow how I got from a security issue to the risk, controls, evidence, finding, remediation, and validation.
 
 ## Scope
 
@@ -62,7 +62,7 @@ Identify condition
 → validate before closure
 ```
 
-The access review exercise shows that full chain for R-001 and AC-6.
+The access review and remediation retest show that full chain for R-001 and the scoped AC-6 condition.
 
 ## Selected Zero Trust relationship
 
@@ -87,10 +87,12 @@ This project does not include:
 - a continuous monitoring program
 - a full Zero Trust maturity assessment
 
-I also do not calculate residual risk across the environment because the controls and remediation have not been validated across the full scope.
+I also do not calculate residual risk across the environment because the controls have not been validated across the full scope. Closing one scoped finding is not enough to establish residual risk for the broader environment.
 
-## What the access review actually tests
+## What the access review and retest actually test
 
 The synthetic access review checks one condition: whether observed access matches approved role access.
 
 I use that as a focused AC-6 Least Privilege assessment example. AC-2 Account Management is related to the broader account lifecycle, but this exercise does not test the full AC-2 control.
+
+The remediation retest is narrower still: it validates that the two unsupported group memberships identified in the original assessment were removed. It does not establish full AC-6 effectiveness across the fictional environment.
