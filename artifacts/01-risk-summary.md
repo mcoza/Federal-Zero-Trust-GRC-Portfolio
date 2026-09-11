@@ -10,6 +10,8 @@ The scores below are the initial risk scores for the scenario. I have not assign
 
 The System Owner is the Risk Owner for these five system-level risks. The technical team carrying out the selected treatment is the Risk Action Owner.
 
+For the one-page management view, see the [Executive Risk View](01A-executive-risk-view.md).
+
 ## Priority view
 
 | Risk | Initial score | Rating | Why it matters | Next action | Risk Owner | Risk Action Owner |
@@ -27,6 +29,8 @@ I completed one access-control review using 12 fictional user records. Ten accou
 One Finance Analyst could edit payroll records. One Support Analyst could administer servers.
 
 Those two exceptions were tracked in POAM-001, corrected, and retested. Both accounts passed the retest, so POAM-001 is closed.
+
+The testing procedure, population, and account-level results are documented in the [Access Review Workpaper](07B-access-review-workpaper.md).
 
 R-001 stays open because fixing two accounts does not prove the larger access-review process is consistently effective across the environment.
 

@@ -6,6 +6,8 @@ This project follows a fictional civilian federal environment with internal user
 
 I kept the scope to five security problems so I could follow each one from risk to control, evidence, remediation, and status without turning the repo into a full federal authorization package.
 
+The [System Context](00A-system-context.md) shows how those users, systems, boundaries, logging paths, and recovery components fit together around the five risks.
+
 ## The five risk areas
 
 1. excessive user access
@@ -55,10 +57,11 @@ I only use the parts of the Zero Trust models that connect to the work in this r
 
 | Area | Main files |
 |---|---|
-| Risk | Risk summary, risk register, risk scoring |
+| Context | System context |
+| Risk and reporting | Risk summary, executive risk view, risk register, risk scoring |
 | Governance | Security policy, responsibility matrix |
 | Controls | Control mapping |
-| Evidence and assessment | Evidence review, access review, access control review |
-| Remediation and reporting | Remediation tracker, access retest, remediation validation |
+| Evidence and assessment | Evidence review, access review, access control review, access review workpaper |
+| Remediation | Remediation tracker, access retest, remediation validation |
 
-The point is traceability. If I start with one of the five risks, I should be able to follow it into ownership, controls, evidence, remediation, and current status without guessing how the pieces connect.
+The point is traceability. If I start with one of the five risks, I should be able to follow it into ownership, controls, evidence, assessment results, remediation, and current status without guessing how the pieces connect.

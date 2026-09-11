@@ -8,6 +8,7 @@ I reviewed 12 fictional user accounts to answer one question: **can these users 
 
 - **Risk:** R-001 Excessive user access
 - **Assessed control:** AC-6 Least Privilege
+- **Workpaper:** [07B-access-review-workpaper.md](07B-access-review-workpaper.md)
 - **Remediation item:** POAM-001
 - **Retest:** [08-remediation-validation.md](08-remediation-validation.md)
 
@@ -17,7 +18,7 @@ AC-2 Account Management is related to the broader account lifecycle, but this da
 
 I used the **examine** method from NIST SP 800-53A Rev. 5.
 
-There are only 12 accounts in the dataset, so I reviewed all 12 instead of taking a sample.
+There are only 12 accounts in the dataset, so I reviewed all 12 instead of taking a sample. The population, criteria, procedure, and account-level testing are documented in the [Access Review Workpaper](07B-access-review-workpaper.md).
 
 ## Evidence
 
@@ -78,8 +79,8 @@ The follow-up retest is documented in [08-remediation-validation.md](08-remediat
 ```text
 R-001 Excessive user access
 → AC-6 Least Privilege
+→ WP-AC6-001
 → compare approved access with actual access
-→ check support for any extra access
 → 2 exceptions
 → POAM-001
 → access corrected

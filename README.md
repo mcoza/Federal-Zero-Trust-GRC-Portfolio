@@ -18,7 +18,7 @@ The project covers five risk areas:
 - SIEM and logging coverage
 - backup and restore validation
 
-Across those areas, the repo includes risk scoring, control mapping, evidence planning, a security policy, a responsibility matrix, remediation tracking, executive reporting, and one access-control review carried through retesting and closure.
+Across those areas, the repo includes risk scoring, a system context view, control mapping, evidence planning, a security policy, a responsibility matrix, remediation tracking, an executive risk view, and one access-control review carried through workpaper testing, retesting, and closure.
 
 ## Current snapshot
 
@@ -27,6 +27,7 @@ Across those areas, the repo includes risk scoring, control mapping, evidence pl
 - **POA&M items:** 5 (1 closed, 4 open)
 - **Evidence requirements:** 8
 - **Completed control assessments:** 1
+- **Assessment workpapers:** 1
 - **Completed remediation retests:** 1
 
 ## Files
@@ -34,7 +35,9 @@ Across those areas, the repo includes risk scoring, control mapping, evidence pl
 | # | File | What it is for |
 |---|---|---|
 | 00 | [Project Overview](artifacts/00-project-overview.md) | Scenario, scope, frameworks, governance roles, and Zero Trust relationships |
+| 00A | [System Context](artifacts/00A-system-context.md) | Logical environment view showing where the five risks sit |
 | 01 | [Risk Summary](artifacts/01-risk-summary.md) | Priority risks, business impact, ownership, completed review, and next actions |
+| 01A | [Executive Risk View](artifacts/01A-executive-risk-view.md) | Heatmap, current risk position, remediation status, and management attention |
 | 02 | [Risk Register](artifacts/02-risk-register.csv) | Risk statements, scores, rationale, treatment, ownership, status, and evidence needs |
 | 02A | [Risk Scoring](artifacts/02-risk-scoring.md) | How I score and rank the risks |
 | 03 | [Control Mapping](artifacts/03-control-mapping.csv) | Which controls matter, what I am checking, and what evidence I would review |
@@ -45,23 +48,24 @@ Across those areas, the repo includes risk scoring, control mapping, evidence pl
 | 05A | [Responsibility Matrix](artifacts/05A-responsibility-matrix.md) | RACI for risk, governance, assessment, and technical activities |
 | 06 | [Evidence Review](artifacts/06-evidence-review.csv) | What evidence I would ask for and how I would check it |
 | 07 | [Access Review](artifacts/07-access-review.csv) | Fictional user access records used in the completed review |
-| 07A | [Access Control Review](artifacts/07-access-control-review.md) | How I tested the access records and documented the exceptions |
+| 07A | [Access Control Review](artifacts/07-access-control-review.md) | Assessment narrative, exceptions, conclusion, and remediation trace |
+| 07B | [Access Review Workpaper](artifacts/07B-access-review-workpaper.md) | Population, testing procedure, account-level results, and workpaper conclusion |
 | 08 | [Access Retest](artifacts/08-access-retest.csv) | Updated access after the two exceptions were corrected |
 | 08A | [Remediation Validation](artifacts/08-remediation-validation.md) | The retest and closure decision for POAM-001 |
 
 ## How the pieces fit together
 
 ```text
-Risk
+System context
+→ risk
 → risk owner and risk action owner
 → control
-→ what should be true
 → evidence
-→ review
+→ assessment workpaper
 → finding
 → remediation
 → retest
-→ reporting
+→ executive reporting
 ```
 
 A closed finding does not automatically close the larger risk. The risk stays open until there is enough evidence to support that decision.
