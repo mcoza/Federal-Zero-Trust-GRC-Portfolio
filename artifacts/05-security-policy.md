@@ -8,7 +8,7 @@
 | Project | Federal Zero Trust GRC Portfolio |
 | Author | Mark C. |
 | Version | 1.0 |
-| Policy Owner | Security / GRC Team |
+| Policy Owner | System Security Officer (SSO) |
 | Approval Authority | System Owner |
 | Effective Date | 2026-08-25 |
 | Review Cycle | Annual or after major system change |
@@ -25,13 +25,17 @@ This policy applies to the fictional federal environment used in this project, i
 
 | Role / Team | Responsibility |
 |---|---|
-| System Owner | Approves business requirements and risk decisions for the system |
+| Authorizing Official (AO) | Makes formal system authorization and system-level risk acceptance decisions |
+| System Owner | Serves as Risk Owner for the five system-level risks and is accountable for treatment, system requirements, and system-specific policy |
+| System Security Officer (SSO) | Maintains the operational security posture and coordinates the risk register, control mapping, evidence, exceptions, and POA&M tracking |
+| Control Assessor | Assesses selected controls and validates remediation or retests with the degree of independence required by the organization |
 | IAM Team | Manages user access, access reviews, and account changes |
 | Security / IAM Team | Manages privileged access requirements and MFA |
 | Network Team | Manages segmentation, firewall and ACL rules, and approved remote access paths |
 | SOC Team | Manages required security logging, monitoring, and review activity |
 | SysAdmin Team | Manages backup jobs and restore testing |
-| Security / GRC Team | Tracks policy exceptions, findings, remediation, and evidence status |
+
+The detailed responsibility split is documented in the [Responsibility Matrix](05A-responsibility-matrix.md).
 
 ## Policy requirements
 
@@ -73,10 +77,12 @@ Exceptions must include:
 
 - business justification
 - affected requirement
-- risk owner or system owner approval
+- System Owner approval
 - compensating control, when applicable
 - review date
 - expiration date, when applicable
+
+An exception that requires formal acceptance of system-level residual risk must be elevated to the Authorizing Official.
 
 ## Evidence
 
@@ -84,6 +90,6 @@ Evidence may include user access reports, role matrices, access approval records
 
 ## Compliance and review
 
-Findings against this policy should be tracked through the remediation process. Closure requires evidence that the corrective action was completed and, where appropriate, retested or validated.
+The SSO tracks findings, remediation, and evidence status. The System Owner remains accountable for the system-level risks and treatment decisions. Where assessment or retesting is required, the Control Assessor reviews the evidence and documents the assessment conclusion.
 
 This policy should be reviewed annually or after major changes to identity systems, network architecture, remote access methods, logging coverage, or backup and recovery processes.

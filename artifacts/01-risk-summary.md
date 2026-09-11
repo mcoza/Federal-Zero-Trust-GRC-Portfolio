@@ -8,15 +8,17 @@ The three highest-ranked risks are excessive user access, weak privileged access
 
 The scores below are the initial risk scores for the scenario. I have not assigned residual risk because the broader risks still need enough evidence to show that the relevant controls are in place and working.
 
+The System Owner is the Risk Owner for these five system-level risks. The technical team carrying out the selected treatment is the Risk Action Owner.
+
 ## Priority view
 
-| Risk | Initial score | Rating | Why it matters | Next action | Action Owner |
-|---|---:|---|---|---|---|
-| R-001 Excessive user access | 20 | High | Users may have access they do not need | Continue access reviews and remove unsupported permissions | IAM Team |
-| R-002 Privileged access governance | 20 | High | Weak admin controls can make misuse or account compromise much more damaging | Review privileged accounts, require MFA, and separate admin access from standard use | Security / IAM Team |
-| R-003 Insufficient network segmentation | 20 | High | A compromised endpoint may be able to reach systems that should be isolated | Define network zones and restrict inter-zone traffic to approved paths | Network Team |
-| R-004 Incomplete SIEM/logging coverage | 15 | High | Missing events can delay detection and investigation | Onboard critical authentication, firewall, endpoint, and administrative logs | SOC Team |
-| R-005 Unvalidated backup and restore | 12 | Moderate | Backups are less useful if nobody has proven they can be restored | Perform and document restore testing | SysAdmin Team |
+| Risk | Initial score | Rating | Why it matters | Next action | Risk Owner | Risk Action Owner |
+|---|---:|---|---|---|---|---|
+| R-001 Excessive user access | 20 | High | Users may have access they do not need | Continue access reviews and remove unsupported permissions | System Owner | IAM Team |
+| R-002 Privileged access governance | 20 | High | Weak admin controls can make misuse or account compromise much more damaging | Review privileged accounts, require MFA, and separate admin access from standard use | System Owner | Security / IAM Team |
+| R-003 Insufficient network segmentation | 20 | High | A compromised endpoint may be able to reach systems that should be isolated | Define network zones and restrict inter-zone traffic to approved paths | System Owner | Network Team |
+| R-004 Incomplete SIEM/logging coverage | 15 | High | Missing events can delay detection and investigation | Onboard critical authentication, firewall, endpoint, and administrative logs | System Owner | SOC Team |
+| R-005 Unvalidated backup and restore | 12 | Moderate | Backups are less useful if nobody has proven they can be restored | Perform and document restore testing | System Owner | SysAdmin Team |
 
 ## Completed assessment
 

@@ -24,12 +24,21 @@ Each risk connects to controls that fit the problem, the evidence I would review
 
 **Supporting references**
 
-- NIST SP 800-37 Rev. 2 for risk-management concepts
+- NIST SP 800-37 Rev. 2 for risk-management roles and RMF context
 - NIST SP 800-53A Rev. 5 for assessment methods and terminology
+- NIST Cybersecurity Framework 2.0 for governance, roles, responsibilities, and authorities
 - NIST SP 800-207 for Zero Trust architecture concepts
 - CISA Zero Trust Maturity Model for the Zero Trust relationships used in the project
 
-NIST SP 800-53 gives me the controls. NIST SP 800-53A helps with how I assess them. NIST SP 800-37 adds risk-management context. NIST SP 800-207 and the CISA model help connect the work to Zero Trust.
+NIST SP 800-53 gives me the controls. NIST SP 800-53A helps with how I assess them. NIST SP 800-37 and the CSF add governance and risk-management context. NIST SP 800-207 and the CISA model help connect the work to Zero Trust.
+
+## Governance roles
+
+In this scenario, the **System Owner** is the Risk Owner for the five system-level risks. The technical team responsible for carrying out the selected treatment is the **Risk Action Owner**.
+
+The **System Security Officer (SSO)** coordinates the day-to-day governance work, including the risk register, control mapping, evidence coordination, and POA&M tracking. The **Control Assessor** is responsible for assessment conclusions and remediation validation. The **Authorizing Official (AO)** retains formal authorization and system-level risk acceptance authority.
+
+The [Responsibility Matrix](05A-responsibility-matrix.md) documents how those roles interact without turning every artifact into another ownership table.
 
 ## Where Zero Trust fits
 
@@ -47,8 +56,9 @@ I only use the parts of the Zero Trust models that connect to the work in this r
 | Area | Main files |
 |---|---|
 | Risk | Risk summary, risk register, risk scoring |
-| Controls | Control mapping, security policy |
+| Governance | Security policy, responsibility matrix |
+| Controls | Control mapping |
 | Evidence and assessment | Evidence review, access review, access control review |
 | Remediation and reporting | Remediation tracker, access retest, remediation validation |
 
-The point is traceability. If I start with one of the five risks, I should be able to follow it into the controls, evidence, remediation, and current status without guessing how the pieces connect.
+The point is traceability. If I start with one of the five risks, I should be able to follow it into ownership, controls, evidence, remediation, and current status without guessing how the pieces connect.
