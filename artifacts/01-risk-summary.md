@@ -20,7 +20,9 @@ The scores below are the starting risk scores for the scenario. I have not assig
 
 ## Completed assessment
 
-I completed one access-control review using 12 fictional user records. Ten accounts matched their approved roles and two had unsupported group memberships.
+I completed one access-control review using 12 fictional user records. Ten accounts stayed within their approved access and two could do things their roles did not allow.
+
+One Finance Analyst could edit payroll records. One Support Analyst could administer servers.
 
 Those two exceptions were tracked in POAM-001, corrected, and retested. Both accounts passed the retest, so POAM-001 is closed.
 
