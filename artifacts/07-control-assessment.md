@@ -4,8 +4,6 @@
 
 This example shows how I went from the access data to an assessment result.
 
-The evidence is synthetic. It does not represent a real organization, real users, or a real federal system.
-
 ## Assessment objective
 
 Determine whether user access matches approved role requirements.
@@ -17,7 +15,7 @@ Determine whether user access matches approved role requirements.
 - **Related remediation item:** POAM-001
 - **Remediation retest:** [08-retest-validation.md](08-retest-validation.md)
 
-AC-2 Account Management is related to the broader account lifecycle, but this exercise does not test the full AC-2 control.
+AC-2 Account Management is related to the broader account lifecycle, but this exercise does not assess the full AC-2 control.
 
 ## Assessment method
 
@@ -31,7 +29,7 @@ The dataset only has 12 accounts, so I reviewed all 12 instead of taking a sampl
 - approved role-to-group assignments in the `Approved Groups` field
 - observed group memberships in the `Observed Groups` field
 
-The CSV only contains the source data. I kept the pass/fail results in this assessment so the answer is not already built into the evidence.
+The CSV contains the source data. I kept the pass/fail results in this assessment so the conclusion is derived from the evidence rather than embedded in it.
 
 ## Expected control condition
 
@@ -89,7 +87,7 @@ POAM-001 tracks these actions:
 4. Retest the corrected accounts after remediation.
 5. Retain updated access evidence before closing the item.
 
-These actions were subsequently validated in [08-retest-validation.md](08-retest-validation.md). Both affected accounts passed the scoped retest, and POAM-001 was closed for this portfolio exercise.
+These actions were subsequently validated in [08-retest-validation.md](08-retest-validation.md). Both affected accounts passed the scoped retest, and POAM-001 was closed.
 
 ## Traceability
 
@@ -119,10 +117,8 @@ Scoped remediation validation: Satisfied
 POAM-001 Closed
 ```
 
-## Limits of this example
+## Assessment scope
 
-This is a focused portfolio exercise, not a complete NIST SP 800-53A assessment. It shows the basic process of setting a condition, reviewing evidence, identifying exceptions, reaching a finding, tracing that finding into remediation, and validating the correction.
-
-The successful retest closes the two identified exceptions only. It does not establish that every AC-6 determination or all access controls across the fictional environment are effective.
+The assessment is limited to the stated access condition and the evidence reviewed here. The successful retest closes the two identified exceptions; broader AC-6 effectiveness would require additional assessment evidence.
 
 Reference: NIST SP 800-53A Rev. 5, Assessing Security and Privacy Controls in Information Systems and Organizations.
