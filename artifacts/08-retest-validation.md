@@ -1,85 +1,54 @@
 # 08 - AC-6 Remediation Retest and Validation
 
-## Purpose
+## What I was checking
 
-This artifact completes the remediation lifecycle for the two access exceptions identified in the R-001 / AC-6 assessment.
+This is the follow-up to the access-control assessment in [07-control-assessment.md](07-control-assessment.md).
+
+The question here is simple: **were the two unsupported group memberships actually removed, and do the affected accounts now match their approved roles?**
 
 ## Related items
 
 - **Risk:** R-001 Excessive user access
 - **Control:** AC-6 Least Privilege
-- **Original assessment:** [07-control-assessment.md](07-control-assessment.md)
 - **Remediation item:** POAM-001
 - **Updated evidence:** [08-synthetic-access-retest.csv](08-synthetic-access-retest.csv)
 
-## Validation objective
+## Method
 
-Determine whether the two unsupported group memberships identified in the original assessment were removed and whether the affected accounts now match the approved role requirements.
+I used the **examine** method from NIST SP 800-53A Rev. 5 and compared the original exceptions with the updated evidence for U-005 and U-009.
 
-## Validation method
-
-I used the **examine** method from NIST SP 800-53A Rev. 5.
-
-I compared the original exception records with the updated synthetic access evidence for U-005 and U-009.
-
-## Closure review
-
-The approved role mappings remained unchanged:
+The approved role mappings did not change:
 
 - Finance Analyst → Finance-Read
 - Support Analyst → Helpdesk-Users
 
-The scenario contained no supporting approval or role-change record for the extra Payroll-Write or Server-Admins memberships. I therefore continued to treat both memberships as unsupported access and validated their removal rather than changing the approved role baseline.
+There was no approval or role-change record supporting the extra Payroll-Write or Server-Admins memberships, so both remained exceptions until they were removed.
 
 ## Retest results
 
-| Account | Original exception | Post-remediation access | Result |
+| Account | Original problem | Post-remediation access | Result |
 |---|---|---|---|
 | U-005 | Payroll-Write exceeded the Finance Analyst role | Finance-Read | Pass |
 | U-009 | Server-Admins exceeded the Support Analyst role | Helpdesk-Users | Pass |
 
-Both affected accounts now match the approved role requirements used in the scoped assessment.
+Both accounts now match the approved role baseline used in the original assessment.
 
-## Validation conclusion
+## Decision
 
 **Satisfied for the scoped remediation retest.**
 
-The two exceptions identified in the original AC-6 assessment were corrected in the updated evidence. POAM-001 can therefore be closed.
+The two exceptions were corrected, the updated evidence matches the approved roles, and both accounts passed the retest. That is enough to close POAM-001.
 
-The conclusion applies to remediation of the two identified exceptions. Broader AC-6 effectiveness would require additional assessment evidence.
-
-## Closure decision
-
-POAM-001 status: **Closed**
+**POAM-001 status: Closed**
 
 Closure is supported by:
 
-1. removal of Payroll-Write from U-005
-2. removal of Server-Admins from U-009
-3. confirmation that the approved role mappings did not change
-4. updated synthetic access evidence
-5. successful retest of both affected accounts
+1. Payroll-Write removed from U-005
+2. Server-Admins removed from U-009
+3. approved role mappings confirmed
+4. updated access evidence retained
+5. both accounts passing the retest
 
-## Traceability
+## What this closes
 
-```text
-R-001 Excessive user access
-        ↓
-AC-6 Least Privilege
-        ↓
-Initial assessment: Other Than Satisfied
-        ↓
-2 unsupported group memberships
-        ↓
-POAM-001
-        ↓
-Unsupported access removed
-        ↓
-Updated evidence reviewed
-        ↓
-2 of 2 retest records pass
-        ↓
-Scoped remediation validation: Satisfied
-        ↓
-POAM-001 Closed
-```
+This closes the two findings from the original assessment. It does not prove that every part of AC-6 is working across the entire environment, which is why the broader R-001 risk remains open.
