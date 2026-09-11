@@ -4,6 +4,8 @@
 
 This tracker records findings, related risks and controls, remediation work, action owners, target dates, status, and closure evidence.
 
+The `Finding Source` field distinguishes an actual control-assessment finding from a weakness that is part of the fictional scenario or baseline review. That keeps the tracker from implying that every open POA&M item came from a completed control assessment.
+
 ## POA&M flow
 
 | Step | Action | Example |
@@ -41,3 +43,5 @@ Remediation completed
 → control condition verified
 → item closed
 ```
+
+POAM-001 demonstrates that closure logic through the AC-6 remediation retest. The remaining POA&M items stay open because the portfolio has not produced and validated closure evidence for them.
