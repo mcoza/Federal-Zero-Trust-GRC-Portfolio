@@ -6,11 +6,11 @@ The biggest concerns in this environment are access, privileged accounts, networ
 
 The three highest-ranked risks are excessive user access, weak privileged access governance, and insufficient network segmentation. All three can make a compromise more damaging by giving an attacker or misused account more access than it should have.
 
-The scores below are the initial risk scores for the scenario. I have not assigned residual risk because the remaining risk areas still need evidence showing that the relevant controls are in place and working.
+The scores below are the initial risk scores for the scenario. I have not assigned residual risk because the broader risks still need enough evidence to show that the relevant controls are in place and working.
 
 ## Priority view
 
-| Risk | Initial score | Rating | Why it matters | Next action | Owner |
+| Risk | Initial score | Rating | Why it matters | Next action | Action Owner |
 |---|---:|---|---|---|---|
 | R-001 Excessive user access | 20 | High | Users may have access they do not need | Continue access reviews and remove unsupported permissions | IAM Team |
 | R-002 Privileged access governance | 20 | High | Weak admin controls can make misuse or account compromise much more damaging | Review privileged accounts, require MFA, and separate admin access from standard use | Security / IAM Team |

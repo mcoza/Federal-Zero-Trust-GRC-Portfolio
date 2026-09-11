@@ -45,7 +45,7 @@ User and privileged access must be reviewed on a scheduled basis and after signi
 
 ### Privileged access
 
-Privileged accounts must be separated from standard user accounts where applicable. Privileged access must require multi-factor authentication and should be monitored through available logging and SIEM capabilities.
+Privileged accounts must be separated from standard user accounts where applicable. Privileged access must require multi-factor authentication and must be monitored through available logging and SIEM capabilities.
 
 ### Network segmentation
 

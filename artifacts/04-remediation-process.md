@@ -17,6 +17,8 @@ That distinction keeps the tracker from implying that every open item came from 
 
 The `Related Controls` field shows which controls connect to the issue. It does not mean those controls were assessed.
 
+The `Risk Rating` field carries the current rating from the related risk register entry. It is not a separate severity score for the remediation item.
+
 ## The flow
 
 | Step | What happens |

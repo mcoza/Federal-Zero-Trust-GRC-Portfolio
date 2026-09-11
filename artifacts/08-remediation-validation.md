@@ -51,4 +51,4 @@ Closure is supported by:
 
 ## What this closes
 
-This closes the two findings from the original review. It does not prove that every part of AC-6 is working across the entire environment, which is why the broader R-001 risk remains open.
+This closes the two exceptions from the original review. It does not prove that every part of AC-6 is working across the entire environment, which is why the broader R-001 risk remains open.
