@@ -1,47 +1,39 @@
 # 07A - Control Assessment
 
-## Purpose
+## What I tested
 
-This example shows how I went from the access data to an assessment result.
+This is the worked control assessment in the repo.
 
-## Assessment objective
-
-Determine whether user access matches approved role requirements.
+I used the synthetic access data to answer one question: **do these users have only the group memberships their approved roles allow?**
 
 ## Related risk and control
 
 - **Risk:** R-001 Excessive user access
 - **Assessed control:** AC-6 Least Privilege
-- **Related remediation item:** POAM-001
-- **Remediation retest:** [08-retest-validation.md](08-retest-validation.md)
+- **Remediation item:** POAM-001
+- **Retest:** [08-retest-validation.md](08-retest-validation.md)
 
-AC-2 Account Management is related to the broader account lifecycle, but this exercise does not assess the full AC-2 control.
+AC-2 Account Management is related to the broader account lifecycle, but this dataset does not test that full process. I kept the assessment tied to AC-6 because that is what the evidence actually supports.
 
-## Assessment method
+## Method
 
 I used the **examine** method from NIST SP 800-53A Rev. 5.
 
-The dataset only has 12 accounts, so I reviewed all 12 instead of taking a sample.
+There are only 12 accounts in the dataset, so I reviewed all 12 instead of taking a sample.
 
 ## Evidence
 
 - [07-synthetic-access-review.csv](07-synthetic-access-review.csv)
 - approved role-to-group assignments in the `Approved Groups` field
-- observed group memberships in the `Observed Groups` field
+- observed memberships in the `Observed Groups` field
 
-The CSV contains the source data. I kept the pass/fail results in this assessment so the conclusion is derived from the evidence rather than embedded in it.
+The CSV only contains the source data. I kept the pass/fail judgment here so I had to derive the result from the evidence instead of building the answer into the dataset.
 
-## Expected control condition
+## What counts as a pass
 
-Observed group membership should not contain access that is unsupported by the approved role.
+Observed group membership should not include access that is unsupported by the approved role.
 
-## Procedure
-
-1. Read the approved groups for each role.
-2. Compare them with the observed groups for each account.
-3. Mark the record as a pass when observed access does not exceed approved access.
-4. Record an exception when the observed groups contain unsupported access.
-5. Trace confirmed exceptions to remediation.
+For each account, I compared the approved groups with the observed groups. If the observed access stayed within the approved role, it passed. If there was extra unsupported access, I recorded an exception.
 
 ## Results
 
@@ -50,8 +42,6 @@ Observed group membership should not contain access that is unsupported by the a
 | Accounts reviewed | 12 |
 | Pass | 10 |
 | Exceptions | 2 |
-
-Only two records contain observed groups that are not in the approved groups.
 
 ### Exception A-01
 
@@ -69,56 +59,39 @@ Only two records contain observed groups that are not in the approved groups.
 - **Observed access:** Helpdesk-Users; Server-Admins
 - **Unsupported access:** Server-Admins
 
-## Initial assessment finding
+## Finding
 
 **Other Than Satisfied for the scoped AC-6 condition.**
 
-The scoped condition is not met across all 12 accounts because two contain access that is not supported by the approved role.
-
-Put simply, least privilege is not being applied consistently in this example.
+Ten accounts matched their approved roles, but two did not. That means least privilege was not being applied consistently across the records I reviewed.
 
 ## Remediation
 
-POAM-001 tracks these actions:
+POAM-001 tracks the corrective work for the two exceptions:
 
 1. Remove Payroll-Write from U-005.
 2. Remove Server-Admins from U-009.
-3. Review the approved role mappings and the access approval or role change process related to the two exceptions.
-4. Retest the corrected accounts after remediation.
-5. Retain updated access evidence before closing the item.
+3. Confirm the approved role baseline for both affected accounts and verify that there is no supporting approval or role-change record for the extra memberships.
+4. Retest the corrected accounts.
+5. Keep the updated access evidence before closing the item.
 
-These actions were subsequently validated in [08-retest-validation.md](08-retest-validation.md). Both affected accounts passed the scoped retest, and POAM-001 was closed.
+The follow-up retest is documented in [08-retest-validation.md](08-retest-validation.md).
 
 ## Traceability
 
 ```text
 R-001 Excessive user access
-        ↓
-AC-6 Least Privilege
-        ↓
-Expected condition: access matches approved role
-        ↓
-Compare approved vs observed access
-        ↓
-2 exceptions found
-        ↓
-Initial scoped finding: Other Than Satisfied
-        ↓
-POAM-001
-        ↓
-Unsupported access removed
-        ↓
-Updated evidence reviewed
-        ↓
-2 of 2 affected accounts pass retest
-        ↓
-Scoped remediation validation: Satisfied
-        ↓
-POAM-001 Closed
+→ AC-6 Least Privilege
+→ compare approved vs. observed access
+→ 2 exceptions
+→ POAM-001
+→ access corrected
+→ retest
+→ POAM-001 closed
 ```
 
-## Assessment scope
+## What the result means
 
-The assessment is limited to the stated access condition and the evidence reviewed here. The successful retest closes the two identified exceptions; broader AC-6 effectiveness would require additional assessment evidence.
+The finding is limited to the access condition tested here. The successful retest closes these two exceptions; it does not prove that every part of AC-6 is effective across the entire environment.
 
-Reference: NIST SP 800-53A Rev. 5, Assessing Security and Privacy Controls in Information Systems and Organizations.
+Reference: NIST SP 800-53A Rev. 5, *Assessing Security and Privacy Controls in Information Systems and Organizations*.
