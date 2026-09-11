@@ -1,47 +1,34 @@
 # 01 - Risk Summary
 
-## Summary
+## What drives the risk picture
 
-The biggest concerns in this environment are access, privileged accounts, network segmentation, logging coverage, and backup recovery.
+The five risks are ranked by likelihood and impact using the project scoring model. The three highest-ranked risks are excessive user access, weak privileged access governance, and insufficient network segmentation because each can expand what an attacker or misused account can reach or change.
 
-The three highest-ranked risks are excessive user access, weak privileged access governance, and insufficient network segmentation. All three can make a compromise more damaging by giving an attacker or misused account more access than it should have.
+R-004 is also High because missing logs can delay detection and investigation across important systems. R-005 is Moderate because failed recovery can cause serious disruption, but its expected impact is narrower than the access and segmentation risks in this scenario.
 
-The scores below are the initial risk scores for the scenario. I have not assigned residual risk because the broader risks still need enough evidence to show that the relevant controls are in place and working.
+I have not assigned residual risk. Most of the open conditions still need evidence that the relevant controls are implemented and working consistently.
 
-The System Owner is the Risk Owner for these five system-level risks. The technical team carrying out the selected treatment is the Risk Action Owner.
+## What the completed assessment tells me
 
-For the one-page management view, see the [Executive Risk View](01A-executive-risk-view.md).
+The R-001 access review tested all 12 accounts in the available population against their approved role access.
 
-## Priority view
+Ten accounts stayed within the approved baseline. Two did not:
 
-| Risk | Initial score | Rating | Why it matters | Next action | Risk Owner | Risk Action Owner |
-|---|---:|---|---|---|---|---|
-| R-001 Excessive user access | 20 | High | Users may have access they do not need | Continue access reviews and remove unsupported permissions | System Owner | IAM Team |
-| R-002 Privileged access governance | 20 | High | Weak admin controls can make misuse or account compromise much more damaging | Review privileged accounts, require MFA, and separate admin access from standard use | System Owner | Security / IAM Team |
-| R-003 Insufficient network segmentation | 20 | High | A compromised endpoint may be able to reach systems that should be isolated | Define network zones and restrict inter-zone traffic to approved paths | System Owner | Network Team |
-| R-004 Incomplete SIEM/logging coverage | 15 | High | Missing events can delay detection and investigation | Onboard critical authentication, firewall, endpoint, and administrative logs | System Owner | SOC Team |
-| R-005 Unvalidated backup and restore | 12 | Moderate | Backups are less useful if nobody has proven they can be restored | Perform and document restore testing | System Owner | SysAdmin Team |
+- U-005, Finance Analyst, could edit payroll records
+- U-009, Support Analyst, could administer servers
 
-## Completed assessment
+Those two exceptions were tracked under POAM-001, corrected, and retested successfully. The testing procedure and account-level results are documented in the [Access Review Workpaper](07B-access-review-workpaper.md).
 
-I completed one access-control review using 12 fictional user records. Ten accounts stayed within their approved access and two could do things their roles did not allow.
+That changes what I know about the specific exceptions, but not enough to close R-001. One corrected review does not establish that the broader access-review process is consistently effective across the environment.
 
-One Finance Analyst could edit payroll records. One Support Analyst could administer servers.
+## What still needs evidence
 
-Those two exceptions were tracked in POAM-001, corrected, and retested. Both accounts passed the retest, so POAM-001 is closed.
+| Risk | Evidence question that still matters |
+|---|---|
+| R-001 | Do repeated access reviews show that unnecessary access is identified and removed consistently? |
+| R-002 | Are privileged accounts approved, separated from standard use, protected with MFA, and monitored? |
+| R-003 | Do deployed firewall, ACL, VPN, and segmentation rules match approved network paths? |
+| R-004 | Are required security log sources reaching the SIEM and being reviewed? |
+| R-005 | Can selected backups actually be restored and validated? |
 
-The testing procedure, population, and account-level results are documented in the [Access Review Workpaper](07B-access-review-workpaper.md).
-
-R-001 stays open because fixing two accounts does not prove the larger access-review process is consistently effective across the environment.
-
-## Recommended next actions
-
-1. Keep scheduled access reviews in place and retain the evidence for R-001.
-2. Review privileged-account ownership, separation, MFA, and activity monitoring for R-002.
-3. Document the approved network zones and remote-access paths, then compare the actual firewall and ACL rules against them.
-4. Confirm that required log sources are actively sending events to the SIEM and that the data is being reviewed.
-5. Run a documented restore test and keep the results.
-
-## What I would look at next
-
-The open risks need evidence, not just planned fixes. The next useful step would be targeted testing of the highest-priority open controls so the risk picture can be updated with something stronger than assumptions.
+The next useful work is targeted testing of those open conditions. The current management position is summarized in the [Executive Risk View](01A-executive-risk-view.md).

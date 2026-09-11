@@ -18,7 +18,7 @@ The project covers five risk areas:
 - SIEM and logging coverage
 - backup and restore validation
 
-Across those areas, the repo includes risk scoring, a system context view, control mapping, evidence planning, a security policy, a responsibility matrix, remediation tracking, an executive risk view, and one access-control review carried through workpaper testing, retesting, and closure.
+Across those areas, the repo includes risk scoring, system context, control mapping, evidence planning, policy, responsibility assignment, remediation tracking, executive reporting, and one access-control review carried through workpaper testing, retesting, and closure.
 
 ## Current snapshot
 
@@ -30,13 +30,22 @@ Across those areas, the repo includes risk scoring, a system context view, contr
 - **Assessment workpapers:** 1
 - **Completed remediation retests:** 1
 
+## Start here
+
+For a quick review of the project:
+
+1. [Executive Risk View](artifacts/01A-executive-risk-view.md) - current risk and remediation position
+2. [Risk Register](artifacts/02-risk-register.csv) - risk statements, scoring, treatment, and ownership
+3. [Access Review Workpaper](artifacts/07B-access-review-workpaper.md) - completed control testing and exceptions
+4. [Remediation Validation](artifacts/08-remediation-validation.md) - retest and evidence-backed closure
+
 ## Files
 
 | # | File | What it is for |
 |---|---|---|
 | 00 | [Project Overview](artifacts/00-project-overview.md) | Scenario, scope, frameworks, governance roles, and Zero Trust relationships |
 | 00A | [System Context](artifacts/00A-system-context.md) | Logical environment view showing where the five risks sit |
-| 01 | [Risk Summary](artifacts/01-risk-summary.md) | Priority risks, business impact, ownership, completed review, and next actions |
+| 01 | [Risk Summary](artifacts/01-risk-summary.md) | Why the risks are ranked as they are and what the evidence currently supports |
 | 01A | [Executive Risk View](artifacts/01A-executive-risk-view.md) | Heatmap, current risk position, remediation status, and management attention |
 | 02 | [Risk Register](artifacts/02-risk-register.csv) | Risk statements, scores, rationale, treatment, ownership, status, and evidence needs |
 | 02A | [Risk Scoring](artifacts/02-risk-scoring.md) | How I score and rank the risks |
