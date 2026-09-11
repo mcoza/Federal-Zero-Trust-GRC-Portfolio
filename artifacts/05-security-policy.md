@@ -7,7 +7,7 @@
 | Document | Security Policy |
 | Project | Federal Zero Trust GRC Portfolio |
 | Author | Mark C. |
-| Version | 1.1 |
+| Version | 1.0 |
 | Policy Owner | Security / GRC Team |
 | Approval Authority | System Owner |
 | Effective Date | 2026-08-25 |
@@ -19,7 +19,7 @@ This policy defines security requirements for user access, privileged access, ne
 
 ## Scope
 
-This policy applies to the fictional federal environment used in this project, including internal users, privileged users, remote access users, application servers, file shares, administrative systems, network infrastructure, SIEM/logging systems, backup systems, and DMZ systems.
+This policy applies to the fictional federal environment used in this project, including internal users, privileged users, remote access users, business applications, application servers, file shares, administrative systems, network infrastructure, SIEM/logging systems, backup systems, and DMZ systems.
 
 ## Roles and responsibilities
 
@@ -80,7 +80,7 @@ Exceptions must include:
 
 ## Evidence
 
-Evidence may include user access reports, role matrices, privileged access reports, MFA configuration evidence, firewall and VPN rules, network diagrams, SIEM log source lists, alert examples, backup logs, restore test reports, and change approval records.
+Evidence may include user access reports, role matrices, access approval records, privileged access reports, MFA configuration evidence, firewall and VPN rules, network diagrams, SIEM log source lists, alert examples, backup logs, restore test reports, and change approval records.
 
 ## Compliance and review
 

@@ -24,14 +24,15 @@ There are only 12 accounts in the dataset, so I reviewed all 12 instead of takin
 - [07-access-review.csv](07-access-review.csv)
 - approved access in the `Approved Access` field
 - actual access in the `Observed Access` field
+- approval or role-change records when observed access falls outside the approved role
 
-The CSV contains the source data. I kept the pass/fail judgment here so the result had to be derived from the evidence instead of being built into the dataset.
+The CSV contains the account and access data. For the two accounts with extra access, I also checked whether any approval or role-change record supported it. None did.
 
 ## What counts as a pass
 
-A user passes when the observed access stays within what the approved role allows.
+A user passes when the observed access is supported by the approved role or another documented approval.
 
-If the user can do something outside that approved access, I record an exception.
+If the user can do something outside that approved access and there is no supporting approval, I record an exception.
 
 ## Results
 
@@ -79,6 +80,7 @@ The follow-up retest is documented in [08-remediation-validation.md](08-remediat
 R-001 Excessive user access
 → AC-6 Least Privilege
 → compare approved access with actual access
+→ check support for any extra access
 → 2 exceptions
 → POAM-001
 → access corrected

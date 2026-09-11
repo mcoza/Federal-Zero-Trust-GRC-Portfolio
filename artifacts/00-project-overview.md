@@ -2,7 +2,7 @@
 
 ## The scenario
 
-This project follows a fictional civilian federal environment with internal users, privileged administrators, remote users, application servers, file shares, logging systems, backup systems, network infrastructure, and segmented network zones.
+This project follows a fictional civilian federal environment with internal users, privileged administrators, remote users, business applications, application servers, file shares, logging systems, backup systems, network infrastructure, and segmented network zones.
 
 I kept the scope to five security problems so I could follow each one from risk to control, evidence, remediation, and status without turning the repo into a full federal authorization package.
 

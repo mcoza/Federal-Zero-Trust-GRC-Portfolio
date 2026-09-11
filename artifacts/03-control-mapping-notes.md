@@ -26,9 +26,9 @@ The control mapping answers four basic questions:
 
 A control can be related to a risk without being tested.
 
-I only mark a control as assessed when I have evidence that lets me evaluate the condition I wrote for it. If the evidence is narrow, the conclusion stays narrow too.
+I only treat a control as assessed when I have evidence that lets me evaluate the condition I wrote for it. If the evidence is narrow, the conclusion stays narrow too.
 
-That keeps the mapping from looking more complete than the work behind it.
+The control mapping itself is not a status tracker. The completed R-001 / AC-6 assessment is documented in [07-access-control-review.md](07-access-control-review.md), and the follow-up retest is documented in [08-remediation-validation.md](08-remediation-validation.md).
 
 ## Using the most specific control that fits
 
@@ -51,6 +51,10 @@ Review and approval of configuration changes
 → CM-3
 ```
 
+## Cross-cutting remediation tracking
+
+I use CA-5 Plan of Action and Milestones as a supporting reference for remediation tracking across the project. I do not assign it to one specific risk in the control mapping because it governs how findings are tracked and closed rather than mitigating one risk condition by itself.
+
 ## What I want to be able to trace
 
 ```text
@@ -66,4 +70,4 @@ Risk
 
 If I cannot explain that chain, the mapping needs more work.
 
-The file only includes controls tied to the five risks in this project. It is not meant to be a full NIST control baseline.
+The file only includes controls tied directly to the five risk conditions in this project. It is not meant to be a full NIST control baseline.

@@ -45,7 +45,7 @@ Closure is supported by:
 
 1. U-005 can no longer edit payroll records
 2. U-009 no longer has server administrator access
-3. approved role access was confirmed
+3. approved role access was confirmed and no separate approval supported the extra access
 4. updated access evidence was retained
 5. both accounts passed the retest
 
