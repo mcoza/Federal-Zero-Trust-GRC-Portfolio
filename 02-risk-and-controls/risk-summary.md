@@ -1,4 +1,4 @@
-# 01 - Risk Summary
+# Risk Summary
 
 ## What drives the risk picture
 
@@ -17,7 +17,7 @@ Ten accounts stayed within the approved baseline. Two did not:
 - U-005, Finance Analyst, could edit payroll records
 - U-009, Support Analyst, could administer servers
 
-Those two exceptions were tracked under POAM-001, corrected, and retested successfully. The testing procedure and account-level results are documented in the [Access Review Workpaper](07B-access-review-workpaper.md).
+Those two exceptions were tracked under POAM-001, corrected, and retested successfully. The testing procedure and account-level results are documented in the [Access Review Workpaper](../03-assessment-and-evidence/access-review-workpaper.md).
 
 That changes what I know about the specific exceptions, but not enough to close R-001. One corrected review does not establish that the broader access-review process is consistently effective across the environment.
 
@@ -31,4 +31,4 @@ That changes what I know about the specific exceptions, but not enough to close 
 | R-004 | Are required security log sources reaching the SIEM and being reviewed? |
 | R-005 | Can selected backups actually be restored and validated? |
 
-The next useful work is targeted testing of those open conditions. The current management position is summarized in the [Executive Risk View](01A-executive-risk-view.md).
+The next useful work is targeted testing of those open conditions. The current management position is summarized in the [Executive Risk View](executive-risk-view.md).

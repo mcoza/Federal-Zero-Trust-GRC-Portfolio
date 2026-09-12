@@ -1,4 +1,4 @@
-# 01A - Executive Risk View
+# Executive Risk View
 
 ## Current position
 

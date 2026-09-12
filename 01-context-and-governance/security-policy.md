@@ -1,4 +1,4 @@
-# 05 - Security Policy
+# Security Policy
 
 ## Document control
 
@@ -35,7 +35,7 @@ This policy applies to the fictional federal environment used in this project, i
 | SOC Team | Manages required security logging, monitoring, and review activity |
 | SysAdmin Team | Manages backup jobs and restore testing |
 
-The detailed responsibility split is documented in the [Responsibility Matrix](05A-responsibility-matrix.md).
+The detailed responsibility split is documented in the [Responsibility Matrix](responsibility-matrix.md).
 
 ## Policy requirements
 

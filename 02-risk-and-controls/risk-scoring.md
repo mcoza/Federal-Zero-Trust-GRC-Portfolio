@@ -1,4 +1,4 @@
-# 02A - Risk Scoring
+# Risk Scoring
 
 ## How I score the risks
 

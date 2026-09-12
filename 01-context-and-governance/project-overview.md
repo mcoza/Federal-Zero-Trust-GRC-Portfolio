@@ -1,4 +1,4 @@
-# 00 - Project Overview
+# Project Overview
 
 ## The scenario
 
@@ -6,7 +6,7 @@ This project follows a fictional civilian federal environment with internal user
 
 I kept the scope to five security problems so I could follow each one from risk to control, evidence, remediation, and status without turning the repo into a full federal authorization package.
 
-The [System Context](00A-system-context.md) shows how those users, systems, boundaries, logging paths, and recovery components fit together around the five risks.
+The [System Context](system-context.md) shows how those users, systems, boundaries, logging paths, and recovery components fit together around the five risks.
 
 ## The five risk areas
 
@@ -40,7 +40,7 @@ In this scenario, the **System Owner** is the Risk Owner for the five system-lev
 
 The **System Security Officer (SSO)** coordinates the day-to-day governance work, including the risk register, control mapping, evidence coordination, and POA&M tracking. The **Control Assessor** is responsible for assessment conclusions and remediation validation. The **Authorizing Official (AO)** retains formal authorization and system-level risk acceptance authority.
 
-The [Responsibility Matrix](05A-responsibility-matrix.md) documents how those roles interact without turning every artifact into another ownership table.
+The [Responsibility Matrix](responsibility-matrix.md) documents how those roles interact without turning every artifact into another ownership table.
 
 ## Where Zero Trust fits
 
@@ -55,13 +55,11 @@ I only use the parts of the Zero Trust models that connect to the work in this r
 
 ## How the project is organized
 
-| Area | Main files |
+| Work area | What it contains |
 |---|---|
-| Context | System context |
-| Risk and reporting | Risk summary, executive risk view, risk register, risk scoring |
-| Governance | Security policy, responsibility matrix |
-| Controls | Control mapping |
-| Evidence and assessment | Evidence review, access review, access control review, access review workpaper |
-| Remediation | Remediation tracker, access retest, remediation validation |
+| Context and Governance | System context, policy, governance roles, and responsibility matrix |
+| Risk and Controls | Risk analysis, scoring, register, executive view, and control mapping |
+| Assessment and Evidence | Evidence planning, source data, assessment narrative, and workpaper |
+| Remediation and Validation | POA&M process, tracker, retest evidence, and closure validation |
 
 The point is traceability. If I start with one of the five risks, I should be able to follow it into ownership, controls, evidence, assessment results, remediation, and current status without guessing how the pieces connect.

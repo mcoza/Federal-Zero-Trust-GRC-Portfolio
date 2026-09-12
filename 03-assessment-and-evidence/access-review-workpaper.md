@@ -1,8 +1,8 @@
-# 07B - Access Review Workpaper
+# Access Review Workpaper
 
 ## Workpaper purpose
 
-This workpaper documents how I tested the scoped R-001 access condition behind the [Access Control Review](07-access-control-review.md).
+This workpaper documents how I tested the scoped R-001 access condition behind the [Access Control Review](access-control-review.md).
 
 | Field | Value |
 |---|---|
@@ -36,7 +36,7 @@ This workpaper evaluates that specific least-privilege condition. It does not ex
 
 | Evidence | Use in the test |
 |---|---|
-| [07-access-review.csv](07-access-review.csv) | Population and account-level approved versus observed access |
+| [Access Review Data](access-review.csv) | Population and account-level approved versus observed access |
 | `Approved Access` field | Role authorization baseline for the scenario |
 | `Observed Access` field | Actual access compared with the approved baseline |
 
@@ -56,7 +56,7 @@ This removes sampling uncertainty for the dataset being reviewed. It does not ma
 
 ## Test procedure
 
-1. Confirm the population in `07-access-review.csv` contains 12 accounts.
+1. Confirm the population in `access-review.csv` contains 12 accounts.
 2. For each account, identify the role and approved access.
 3. Compare `Observed Access` with `Approved Access`.
 4. Record a pass when observed access stays within the approved baseline.
@@ -113,11 +113,11 @@ WP-AC6-001
 → A-01 and A-02
 → POAM-001
 → access removed
-→ 08-access-retest.csv
+→ ../04-remediation-and-validation/access-retest.csv
 → scoped retest Satisfied
 → POAM-001 Closed
 ```
 
-The remediation result is documented in [08-remediation-validation.md](08-remediation-validation.md). The successful retest closes the two exceptions, while the broader R-001 risk remains open pending enough evidence to judge the wider access-review process.
+The remediation result is documented in [Remediation Validation](../04-remediation-and-validation/remediation-validation.md). The successful retest closes the two exceptions, while the broader R-001 risk remains open pending enough evidence to judge the wider access-review process.
 
 Reference: NIST SP 800-53A Rev. 5, *Assessing Security and Privacy Controls in Information Systems and Organizations*.

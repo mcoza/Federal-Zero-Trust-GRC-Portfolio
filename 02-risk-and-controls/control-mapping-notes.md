@@ -1,4 +1,4 @@
-# 03A - Control Mapping Notes
+# Control Mapping Notes
 
 ## How I map controls
 
@@ -28,7 +28,7 @@ A control can be related to a risk without being tested.
 
 I only treat a control as assessed when I have evidence that lets me evaluate the condition I wrote for it. If the evidence is narrow, the conclusion stays narrow too.
 
-The control mapping itself is not a status tracker. The completed R-001 / AC-6 assessment is documented in [07-access-control-review.md](07-access-control-review.md), and the follow-up retest is documented in [08-remediation-validation.md](08-remediation-validation.md).
+The control mapping itself is not a status tracker. The completed R-001 / AC-6 assessment is documented in the [Access Control Review](../03-assessment-and-evidence/access-control-review.md), and the follow-up retest is documented in [Remediation Validation](../04-remediation-and-validation/remediation-validation.md).
 
 ## Using the most specific control that fits
 

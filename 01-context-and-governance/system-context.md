@@ -1,4 +1,4 @@
-# 00A - System Context
+# System Context
 
 ## Why this view exists
 
@@ -81,4 +81,4 @@ The context view also shows why the Zero Trust references are relevant without r
 - **Visibility and Analytics:** logs reaching the SIEM and being reviewed
 - **Governance:** risk ownership, policy, evidence, remediation, and validation
 
-The [Project Overview](00-project-overview.md) explains the scenario and frameworks. The [Risk Register](02-risk-register.csv) contains the five risk statements and treatments.
+The [Project Overview](project-overview.md) explains the scenario and frameworks. The [Risk Register](../02-risk-and-controls/risk-register.csv) contains the five risk statements and treatments.

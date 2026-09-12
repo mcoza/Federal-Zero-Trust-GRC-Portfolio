@@ -1,4 +1,4 @@
-# 05A - Responsibility Matrix (RACI)
+# Responsibility Matrix (RACI)
 
 ## Purpose
 

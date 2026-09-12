@@ -1,4 +1,4 @@
-# 04A - Remediation Process
+# Remediation Process
 
 ## How I use the tracker
 
@@ -17,7 +17,7 @@ The ownership labels in this repo refer to different levels of responsibility:
 - **Control Assessor:** owns assessment conclusions and remediation validation when a retest or formal assessment is required.
 - **Authorizing Official (AO):** makes formal authorization and system-level risk acceptance decisions. The AO does not perform day-to-day remediation.
 
-The detailed responsibility split is documented in [05A-responsibility-matrix.md](05A-responsibility-matrix.md).
+The detailed responsibility split is documented in the [Responsibility Matrix](../01-context-and-governance/responsibility-matrix.md).
 
 ## Source matters
 

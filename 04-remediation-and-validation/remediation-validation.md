@@ -1,8 +1,8 @@
-# 08A - Remediation Validation
+# Remediation Validation
 
 ## What I was checking
 
-This is the follow-up to the access-control review in [07-access-control-review.md](07-access-control-review.md).
+This is the follow-up to the [Access Control Review](../03-assessment-and-evidence/access-control-review.md).
 
 The question is simple: **was the extra access removed, and are both users now limited to what their roles allow?**
 
@@ -11,7 +11,7 @@ The question is simple: **was the extra access removed, and are both users now l
 - **Risk:** R-001 Excessive user access
 - **Control:** AC-6 Least Privilege
 - **Remediation item:** POAM-001
-- **Updated evidence:** [08-access-retest.csv](08-access-retest.csv)
+- **Updated evidence:** [Access Retest](access-retest.csv)
 
 ## Method
 

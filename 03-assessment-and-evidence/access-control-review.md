@@ -1,4 +1,4 @@
-# 07A - Access Control Review
+# Access Control Review
 
 ## What I tested
 
@@ -8,9 +8,9 @@ I reviewed 12 fictional user accounts to answer one question: **can these users 
 
 - **Risk:** R-001 Excessive user access
 - **Assessed control:** AC-6 Least Privilege
-- **Workpaper:** [07B-access-review-workpaper.md](07B-access-review-workpaper.md)
+- **Workpaper:** [Access Review Workpaper](access-review-workpaper.md)
 - **Remediation item:** POAM-001
-- **Retest:** [08-remediation-validation.md](08-remediation-validation.md)
+- **Retest:** [Remediation Validation](../04-remediation-and-validation/remediation-validation.md)
 
 AC-2 Account Management is related to the broader account lifecycle, but this dataset does not test that full process. I kept the assessment tied to AC-6 because that is what the evidence supports.
 
@@ -18,11 +18,11 @@ AC-2 Account Management is related to the broader account lifecycle, but this da
 
 I used the **examine** method from NIST SP 800-53A Rev. 5.
 
-There are only 12 accounts in the dataset, so I reviewed all 12 instead of taking a sample. The population, criteria, procedure, and account-level testing are documented in the [Access Review Workpaper](07B-access-review-workpaper.md).
+There are only 12 accounts in the dataset, so I reviewed all 12 instead of taking a sample. The population, criteria, procedure, and account-level testing are documented in the [Access Review Workpaper](access-review-workpaper.md).
 
 ## Evidence
 
-- [07-access-review.csv](07-access-review.csv)
+- [Access Review Data](access-review.csv)
 - approved access in the `Approved Access` field
 - actual access in the `Observed Access` field
 
@@ -72,7 +72,7 @@ POAM-001 tracks the corrective work for the two exceptions:
 4. Retest the corrected accounts.
 5. Keep the updated access evidence before closing the item.
 
-The follow-up retest is documented in [08-remediation-validation.md](08-remediation-validation.md).
+The follow-up retest is documented in [Remediation Validation](../04-remediation-and-validation/remediation-validation.md).
 
 ## Traceability
 
