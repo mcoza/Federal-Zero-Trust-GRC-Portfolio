@@ -1,5 +1,7 @@
 # Executive Risk View
 
+This is the management-facing view of current risk status, ownership, remediation position, and next decisions. Detailed assessment reasoning is kept in the [Analyst Risk Summary](risk-summary.md).
+
 ## Current position
 
 - **Tracked risks:** 5
@@ -9,9 +11,9 @@
 - **Closed:** 1
 - **Open:** 4
 
-One scoped access-control assessment identified two exceptions under R-001. Both were corrected and passed retest, so POAM-001 is closed. R-001 remains open because the broader access-review process still needs enough evidence to support a wider conclusion.
+POAM-001 is closed after both access exceptions under R-001 were corrected and passed retest. R-001 remains open because the broader access-review process still needs additional evidence.
 
-The remaining four POA&M items come from scenario baseline conditions and have not been presented as completed control assessments.
+The other four POA&M items are scenario baseline conditions, not completed control-assessment findings.
 
 ## Risk heatmap
 
@@ -25,18 +27,18 @@ The remaining four POA&M items come from scenario baseline conditions and have n
 
 ## Priority status
 
-| Risk | Rating | Risk Action Owner | Current position |
+| Risk | Rating | Risk Action Owner | Management position |
 |---|---|---|---|
-| R-001 Excessive user access | High | IAM Team | Two exceptions were corrected and retested; broader risk remains open |
-| R-002 Privileged access governance | High | Security / IAM Team | Evidence still needed for account review, separation, MFA, and monitoring |
-| R-003 Insufficient network segmentation | High | Network Team | Approved zones and traffic paths still need to be validated against deployed rules |
-| R-004 Incomplete SIEM/logging coverage | High | SOC Team | Critical log-source coverage and review still need validation |
-| R-005 Unvalidated backup and restore | Moderate | SysAdmin Team | A documented restore test is still needed |
+| R-001 Excessive user access | High | IAM Team | POAM-001 closed; broader risk remains open pending repeated review evidence |
+| R-002 Privileged access governance | High | Security / IAM Team | Prioritize testing of approval, separation, MFA, and monitoring |
+| R-003 Insufficient network segmentation | High | Network Team | Validate approved zones and traffic paths against deployed rules |
+| R-004 Incomplete SIEM/logging coverage | High | SOC Team | Validate critical log-source coverage and review activity |
+| R-005 Unvalidated backup and restore | Moderate | SysAdmin Team | Complete and document a restore test |
 
-## Management attention
+## Management priorities
 
-1. Build repeated access-review evidence for R-001.
-2. Test privileged-access and segmentation controls next.
+1. Establish repeated access-review evidence for R-001.
+2. Test privileged-access and segmentation controls.
 3. Validate SIEM coverage and review activity.
 4. Complete and document a restore test.
 
