@@ -30,14 +30,17 @@ Across those areas, the repo includes risk scoring, system context, control mapp
 - **Assessment workpapers:** 1
 - **Completed remediation retests:** 1
 
-## Start here
+## 5-minute reviewer path
 
-For a quick review of the project:
+If you only review a few files, use this order:
 
-1. [Executive Risk View](02-risk-and-controls/executive-risk-view.md) - current risk and remediation position
-2. [Risk Register](02-risk-and-controls/risk-register.csv) - risk statements, scoring, treatment, and ownership
-3. [Access Review Workpaper](03-assessment-and-evidence/access-review-workpaper.md) - completed control testing and exceptions
-4. [Remediation Validation](04-remediation-and-validation/remediation-validation.md) - retest and evidence-backed closure
+1. [Executive Risk View](02-risk-and-controls/executive-risk-view.md) - management view of current risk status, ownership, and priorities
+2. [Risk Register](02-risk-and-controls/risk-register.csv) - underlying risk statements, scoring, treatment, and ownership
+3. [Analyst Risk Summary](02-risk-and-controls/risk-summary.md) - reasoning behind the rankings and what remains unproven
+4. [Access Review Workpaper](03-assessment-and-evidence/access-review-workpaper.md) - completed control testing, account-level results, and exceptions
+5. [Remediation Validation](04-remediation-and-validation/remediation-validation.md) - evidence-backed retest and closure of the scoped exceptions
+
+That path shows the project from management view to underlying risk logic, then into testing and remediation closure.
 
 ## Explore the project
 
@@ -54,7 +57,7 @@ Understand the scenario, system relationships, policy, and who is accountable fo
 
 See how the five risks are prioritized, scored, assigned, and connected to NIST controls.
 
-- [Risk Summary](02-risk-and-controls/risk-summary.md)
+- [Analyst Risk Summary](02-risk-and-controls/risk-summary.md)
 - [Executive Risk View](02-risk-and-controls/executive-risk-view.md)
 - [Risk Register](02-risk-and-controls/risk-register.csv)
 - [Risk Scoring](02-risk-and-controls/risk-scoring.md)
