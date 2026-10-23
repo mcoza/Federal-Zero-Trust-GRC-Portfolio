@@ -20,27 +20,35 @@ The project covers five risk areas:
 
 Across those areas, the repo includes risk scoring, system context, control mapping, evidence planning, policy, responsibility assignment, remediation tracking, executive reporting, and one access-control review carried through workpaper testing, retesting, and closure.
 
+## Evidence and authorship
+
+I authored the risk analysis, control mapping, test procedure, workpaper, and remediation narrative as a portfolio exercise. The account data and retest records are synthetic scenario inputs, not exports from a federal system. The team and assessor titles describe scenario responsibilities; they do not represent separate people who performed or approved this work.
+
+The completed example demonstrates evidence comparison, exception documentation, and a scoped closure decision. It does not establish production control effectiveness, independent assessment, or federal authorization.
+
 ## Current snapshot
 
 - **Risks:** 5
-- **High initial risks:** 4
+- **High initial risks:** 4 (scenario ratings; residual risk not assessed)
 - **POA&M items:** 5 (1 closed, 4 open)
-- **Evidence requirements:** 8
-- **Completed control assessments:** 1
+- **Evidence requirements:** 8 (an evidence request plan, not 8 collected artifacts)
+- **Completed control assessments:** 1 scoped AC-6 exercise (12 accounts; 10 pass, 2 exceptions)
 - **Assessment workpapers:** 1
 - **Completed remediation retests:** 1
 
 ## 5-minute reviewer path
 
-If you only review a few files, use this order:
+Follow one example from decision to source records:
 
-1. [Executive Risk View](02-risk-and-controls/executive-risk-view.md) - management view of current risk status, ownership, and priorities
-2. [Risk Register](02-risk-and-controls/risk-register.csv) - underlying risk statements, scoring, treatment, and ownership
-3. [Analyst Risk Summary](02-risk-and-controls/risk-summary.md) - reasoning behind the rankings and what remains unproven
-4. [Access Review Workpaper](03-assessment-and-evidence/access-review-workpaper.md) - completed control testing, account-level results, and exceptions
-5. [Remediation Validation](04-remediation-and-validation/remediation-validation.md) - evidence-backed retest and closure of the scoped exceptions
+| Step | Open | What to verify |
+|---|---|---|
+| 1. Management decision | [Executive Risk View](02-risk-and-controls/executive-risk-view.md) | Five risks remain open; initial ratings have not been rescored after remediation |
+| 2. Risk and ownership | [Risk Register](02-risk-and-controls/risk-register.csv) — R-001 | Score 20 / High; System Owner owns the risk; IAM Team carries out treatment |
+| 3. Test and source | [Workpaper WP-AC6-001](03-assessment-and-evidence/access-review-workpaper.md) → [12-account dataset](03-assessment-and-evidence/access-review.csv) | Compare approved and observed access; U-005 and U-009 have extra permissions |
+| 4. Corrective action | [Remediation Tracker](04-remediation-and-validation/remediation-tracker.csv) — POAM-001 | A-01 and A-02 share one IAM-owned corrective action with explicit closure requirements |
+| 5. Retest and decision | [Remediation Validation](04-remediation-and-validation/remediation-validation.md) → [two-account retest](04-remediation-and-validation/access-retest.csv) | Both corrected rows match the original baseline; scoped closure leaves R-001 open |
 
-That path shows the project from management view to underlying risk logic, then into testing and remediation closure.
+For the ranking rationale and remaining evidence questions, see the [Analyst Risk Summary](02-risk-and-controls/risk-summary.md). For the distinction between risk accountability, remediation, and assessment, see the [Responsibility Matrix](01-context-and-governance/responsibility-matrix.md).
 
 ## Explore the project
 
@@ -84,17 +92,6 @@ See how issues are tracked, corrected, retested, and closed without automaticall
 
 ## How the pieces fit together
 
-```text
-System context
-→ risk
-→ risk owner and risk action owner
-→ control
-→ evidence
-→ assessment workpaper
-→ finding
-→ remediation
-→ retest
-→ executive reporting
-```
+Risk and owner → control and evidence → test and finding → corrective action and owner → retest and scoped closure → risk reporting.
 
 A closed finding does not automatically close the larger risk. The risk stays open until there is enough evidence to support that decision.
