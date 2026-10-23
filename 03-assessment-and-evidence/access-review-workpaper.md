@@ -42,6 +42,14 @@ This workpaper evaluates that specific least-privilege condition. It does not ex
 
 No separate exception is documented for U-005 or U-009 in the scenario evidence.
 
+### Evidence provenance and limits
+
+`access-review.csv` is an author-created synthetic dataset. Its `Approved Access` and `Observed Access` columns supply both the expected and observed condition. They are sufficient to reproduce this comparison, but they are not independently sourced approvals or an actual system export. The 12 rows are the entire available scenario population; completeness against a directory or application inventory has not been verified.
+
+No separate approved role matrix, access approval records, exception register, collection timestamp, or reviewer sign-off is retained. Therefore, “no documented exception” means none is supplied in this exercise; it does not establish that a real approval search was performed. The original dataset is retained unchanged so the retest can be compared with the initial exceptions.
+
+For an operational review, I would obtain a dated access export, independently approved role baseline, approval/exception records, and population reconciliation before relying on this conclusion beyond the exercise.
+
 ## Population and sampling decision
 
 The available population contains 12 accounts. Because the population is small, I tested all 12 instead of selecting a sample.
